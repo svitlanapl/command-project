@@ -1,0 +1,68 @@
+@mixin centeredFlex ($type: flex, $jc: center, $ai: center) {
+    display: $type;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin bgImg ($img) {
+    background-image: $gradientHero,
+    url(../images/#{$img}.jpg);
+}
+
+@mixin bg-ratioImg ($img) {
+    background-image: $gradientHero,
+    url(../images/#{$img}.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: $gradientHero,
+        url(../images/#{$img}@2x.jpg);
+    }
+}
+
+@mixin marginColumn ($top: calc(-1 * #{$card-set-gap}), $left: calc(-1 * #{$card-set-gap})) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $top;
+    margin-left: $left;
+}
+
+@mixin contentColumn ($column: 4, $top: $card-set-gap, $left: $card-set-gap) {
+    flex-basis: calc((100% / #{$column}) - #{$card-set-gap});
+    margin-top: $top;
+    margin-left: $left;
+}
+
+
+//------------- media breakpoints (перші два універсальні) -------------//
+@mixin minBreakpoints ($typeScreen) {
+    @media screen and (min-width: #{$typeScreen}) {
+        @content;
+    }
+}
+
+@mixin maxBreakpoints ($typeScreen) {
+    @media screen and (max-width: #{$typeScreen}) {
+        @content;
+    }
+}
+
+
+@mixin mobile {
+    @media screen and (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}

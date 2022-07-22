@@ -1,0 +1,15 @@
+%title {
+    font-family: $font-secondary;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+
+// треба попитатись в ментора про кнопки --- в кнопок ширина якась дивна в header-hero (62.4px та 82.8px) дальше є 161.45 
+%btn {
+    cursor: pointer;
+    font-family: $font-primary;
+    border-radius: 22px;
+    border: transparent;
+}

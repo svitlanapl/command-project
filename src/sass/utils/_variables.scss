@@ -1,0 +1,46 @@
+/*----------------------- font -----------------------*/
+$font-primary: 'DM Sans',
+    sans-serif;
+$font-secondary: 'Titan One', cursive, sans-serif;
+
+/*----------------------- breakpoints -----------------------*/
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1200px;
+$breakpointsType: $mobile, $tablet, $desktop;
+
+/*----------------------- text colors -----------------------*/
+$primary-accent-color: #d41443;
+$secondary-color: #ffa5ba;
+$secondary-light-color: #ffffff;
+$primary-text-color: #000000;
+$text-color: #907e82;
+
+/*----------------------- background colors -----------------------*/
+$primary-bg-color: #ffb8ca;
+$secondary-bg-color: #ffa5ba;
+$about-bg-color: #fff5f6;
+
+/*----------------------- products background colors -----------------------*/
+$cream-bg-color: #ffb8ca;
+$coffe-bg-color: #f0d1a5;
+$milkshakes-bg-color: #c2e297;
+
+/*----------------------- btn colors -----------------------*/
+$btn-primary-accent-color: #d41443;
+$btn-secondary-accent-color: #d41342;
+$btn-primary-light-color: #ffffff;
+$btn-secondary-light-color: #ecebeb;
+
+/*----------------------- radius -----------------------*/
+$btn-radius: 22px;
+$card-radius: 24px;
+$gallery-primary-img-radius: 20px;
+$gallery-secondary-img-radius: 8px;
+$review-img-radius: 44px;
+
+/*----------------------- shadow -----------------------*/
+$card-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+/*----------------------- animations -----------------------*/
+$animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
