@@ -1,0 +1,205 @@
+.hero {
+  min-height: 502px;
+  padding-top: 83px;
+  margin: 0 auto;
+  background-color: $primary-bg-color;
+  @include tablet {
+    padding-top: 43px;
+  }
+  @include desktop {
+    padding-top: 58px;
+  }
+}
+.hero .container {
+  position: relative;
+  overflow-x: clip;
+  @media screen and (max-width: 402px) {
+    padding-left: 36px;
+  }
+}
+.hero__title-box {
+  position: absolute;
+  top: 111px;
+  left: 20px;
+  z-index: 2;
+  max-width: 218px;
+  @include tablet {
+    top: 59px;
+    left: 32px;
+    max-width: 162px;
+  }
+  @include desktop {
+    top: 93px;
+    left: 16px;
+    max-width: 277px;
+  }
+}
+.hero__title {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 0.96;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $secondary-light-color;
+  & span {
+    font-size: 48px;
+    color: #d41443;
+  }
+  @include tablet {
+    font-size: 22px;
+    line-height: 1.14;
+    & span {
+      font-size: 34px;
+      line-height: 0.9;
+    }
+  }
+  @include desktop {
+    font-size: 38px;
+    line-height: 1.16;
+    & span {
+      font-size: 58px;
+      line-height: 0.9;
+    }
+  }
+}
+.icecream-bg {
+  margin: 0 auto;
+  padding-left: 81px;
+  padding-top: 9px;
+  width: 345px;
+  height: 345px;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  @include tablet {
+    padding-left: 74px;
+    padding-top: 37px;
+    width: 335px;
+    height: 335px;
+    margin-left: 216px;
+  }
+  @include desktop {
+    padding-left: 119px;
+    padding-top: 54px;
+    width: 534px;
+    height: 534px;
+    margin-left: 501px;
+  }
+}
+.girl-img {
+  display: none;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  @include tablet {
+    display: block;
+    top: 222px;
+    right: 32px;
+  }
+  @include desktop {
+    top: 369px;
+    right: 16px;
+  }
+}
+.jug-img {
+  display: none;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  @include tablet {
+    display: block;
+    top: 246px;
+    left: 32px;
+  }
+  @include desktop {
+    top: 369px;
+    left: 16px;
+  }
+}
+.hero__text-box {
+  display: none;
+  position: absolute;
+  @include tablet {
+    display: block;
+    left: 184px;
+    top: 244px;
+    width: 114px;
+  }
+  @include desktop {
+    left: 245px;
+    top: 402px;
+    width: 200px;
+  }
+}
+.hero__text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $secondary-light-color;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+.hero__more-btnbtn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.hero__counters-box {
+  display: none;
+  @include tablet {
+    display: block;
+    position: absolute;
+    right: 32px;
+    top: 92px;
+    text-align: right;
+  }
+  @include desktop {
+    right: 16px;
+    top: 102px;
+  }
+}
+.cafes-counter,
+.trucks-counter {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $secondary-light-color;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+.cafes-number,
+.trucks-number {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  color: #d41443;
+  @include desktop {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+}
+
+.cafes-counter::before,
+.trucks-counter::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $secondary-light-color;
+  @include desktop {
+    width: 30px;
+    height: 30px;
+  }
+}
