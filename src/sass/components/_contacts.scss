@@ -48,6 +48,22 @@
     height: 16px;
   }
 
+  .contacts__img {
+    display: none;
+  }
+
+  .contacts__title-cafe:hover .contacts__img {
+    display: block;
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  .contacts__title-foodtruck:hover .contacts__img {
+    display: block;
+    position: absolute;
+    margin-right: -250px;
+  }
+
   .contacts__city {
     font-family: $font-primary;
     font-style: normal;
