@@ -7,25 +7,32 @@
 
 // === велика кнопка з іконкою ===
 // <button class="button">
-//     Our locations
-//     <svg class="button__icon" width="8" height="10">
-//       <use href="./images/icons.svg#icon-more"></use>
-//     </svg>
-//   </button>
+//   Our locations
+//   <svg class="button__icon" width="8" height="10">
+//     <use href="./images/icons.svg#icon-more"></use>
+//   </svg>
+// </button>
 
 // === велика червона кнопка з іконкою ===
 // <button class="button button--accent">
-//     Our locations
-//     <svg class="button__icon" width="8" height="10">
-//       <use href="./images/icons.svg#icon-more"></use>
-//     </svg>
-//   </button>
+//   Our locations
+//   <svg class="button__icon" width="8" height="10">
+//     <use href="./images/icons.svg#icon-more"></use>
+//   </svg>
+// </button>
 
 // === маленька кнопка без іконки ===
 // <button class="button button--small">How it’s made?</button>
 
 // === маленька червона кнопка без іконки ===
 // <button class="button button--small button--accent">How it’s made?</button>
+
+// === кругла кнопка зі стрілочкою із секції Products ===
+// <button class="button button--circle">
+//   <svg class="button__icon" width="12" height="12">
+//     <use href="./images/icons.svg#arrow"></use>
+//   </svg>
+// </button>
 
 .button {
   @include centeredFlex();
@@ -63,9 +70,22 @@
     line-height: 1.25;
     border-radius: $btn-small-radius;
   }
+
+  &--circle {
+    padding: 0;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
 }
 
 .button__icon {
   margin-left: 10px;
   stroke: currentColor;
+
+  .button--circle & {
+    margin-left: 0;
+    fill: currentColor;
+  }
 }
