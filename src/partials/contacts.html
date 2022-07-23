@@ -1,3 +1,125 @@
+<div class="service__order">
+  <div class="container">
+    <div class="contact__buttons">
+      <button class="our__locations data-locations-open" data-locations-open name="button">
+        Our Locations&nbsp;&nbsp;>
+      </button>
+      <button class="service__order__button data-franchise-open" data-franchise-open name="button">
+        Franchise&nbsp;&nbsp;>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- franchise -->
+
+<div class="backdrop is-hidden" data-franchise>
+  <div class="franchise">
+    <p class="franchise__p">Leave your details, we will call you back</p>
+    <form class="franchise__form" autocomplete="on">
+      <div class="franchise__field">
+        <label class="franchise__label" for="user-name">Name</label>
+        <div class="input-wrap">
+          <input type="text" name="user-name" id="user-name" class="franchise__input" required />
+          <!-- <svg class="input-icon" width="18" height="18">
+            <use href="../images/icons.svg#icon-person-black"></use>
+          </svg> -->
+        </div>
+      </div>
+
+      <div class="franchise__field">
+        <label class="franchise__label" for="user-tel">Phone number</label>
+        <div class="input-wrap">
+          <input type="tel" name="user-tel" class="franchise__input" required minlength="10" title="+38 (096) 111-11-11"
+            id="user-tel" />
+          <!-- <svg class="input-icon" width="18" height="18">
+            <use href="../images/icons.svg#icon-phone-black"></use>
+          </svg> -->
+        </div>
+      </div>
+
+      <div class="franchise__field">
+        <label class="franchise__label" for="user-mail">Mail</label>
+        <div class="input-wrap">
+          <input type="email" name="user-mail" class="franchise__input" required id="user-mail" />
+          <!-- <svg class="input-icon" width="18" height="18">
+            <use href="../images/icons.svg#icon-email-black"></use>
+          </svg> -->
+        </div>
+      </div>
+
+      <div class="franchise__field">
+        <label class="franchise__label" for="franchise__text">Comment</label>
+        <div class="input-wrap">
+          <textarea name="franchise__text" id="franchise__text" class="franchise__text__area" placeholder=""></textarea>
+        </div>
+      </div>
+
+      <div class="franchise__field">
+        <input required type="checkbox" name="privacy" id="privacy" class="input-check visually-hidden" />
+      </div>
+      <button type="submit" class="franchise__btn">Send&nbsp;&nbsp;></button>
+    </form>
+
+    <button type="button" class="franchise-close-btn" data-franchise-close>
+      <!-- <svg class="closebtn" width="24" height="24">
+        <use href="../images/icons.svg#icon-closebtn"></use>
+      </svg> -->
+    </button>
+  </div>
+</div>
+
+<!-- locations -->
+
+<div class="backdrop__locations is-hidden" data-locations>
+  <div class="locations">
+    <p class="locations__p">How to find us</p>
+
+    <ul class="locations__list list">
+      <li class="locations__contacts">
+        <a href="https://goo.gl/maps/NfGisxWstW6zDTPW7" target="_blank" rel="noopener noreferrer nofollow"
+          class="locations__addres link">Chicago</a>
+          <iframe class="chicago__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190255.8460334488!2d-87.73196395!3d41.83373295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2z0KfQuNC60LDQs9C-LCDQmNC70LvQuNC90L7QudGBLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1658443538576!5m2!1sru!2sua"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </li>
+      
+      <li class="locations__contacts">
+        <a href="https://goo.gl/maps/PQjJaShYGLekrmtLA" target="_blank" rel="noopener noreferrer nofollow"
+          class="locations__addres link">Los Angeles</a>
+
+          <iframe class="los__angeles__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130653294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1658444413525!5m2!1sru!2sua"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </li>
+      
+      <li class="locations__contacts">
+        <a href="https://goo.gl/maps/TpaQWH58xnBxjYPR7" target="_blank" rel="noopener noreferrer nofollow"
+          class="locations__addres link">New York</a>
+
+          <iframe class="new__york__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1658444558909!5m2!1sru!2sua"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </li>
+      
+    </ul>
+
+
+    <button type="button" class="locations-close-btn" data-locations-close>X
+      <!-- <svg class="closebtn" width="24" height="24">
+        <use href="../images/icons.svg#icon-closebtn"></use>
+      </svg> -->
+    </button>
+  </div>
+</div>
+
+
+
 <section id="contact" class="contacts">
   <div class="container contacts__container">
     <h2 class="visually-hidden">Contacts</h2>
