@@ -3,8 +3,8 @@
     margin: 0 auto;
     padding: 0 20px;
 
-    @include minBreakpoints ($mobile) {
-        width: $mobile;
+    @include minBreakpoints (425px) {
+        width: 425px;
     }
 
     @include minBreakpoints ($tablet) {
