@@ -12,7 +12,7 @@
 // --------------product scss==============
 
 .product {
-background-color: #E5E5E5;
+background-color:$secondary-light-color;
 }
 
 .product__title-wrap{
@@ -70,35 +70,32 @@ position: relative;
 
 .card--ice-cream:before {
     content: "";   
-    background: url("../images/daria_img_product_ice_cream_1.png");
-    
+    background: url("../images/Products-img-1-ice-cream-mob-1x.png");
     background-repeat: no-repeat;
     position: absolute;
     top: -140px; left: 0;
     width: 280px; height: 280px;
     z-index: 1;
-   }
-
+}
+ 
 .card--ice-coffee:before {
-    content: "";   
-    background: url("../images/daria_img_product_ice_cream_1.png");
-    // background-size:  auto;
+    content: "";    
+    background: url('../images/Products-img-2-icecoffee-mob-1x.png');
     background-repeat: no-repeat;
     position: absolute;
     top: -140px; left: 0;
     width: 280px; height: 280px;
     z-index: 1;
-   }
+}
 .card--milkshakes:before {
     content: "";   
-    background: url("../images/daria_img_product_ice_cream_1.png");
-    // background-size:  auto;
+    background: url("../images/Products-img-3-milkshakes-mob-1x.png");
     background-repeat: no-repeat;
     position: absolute;
     top: -140px; left: 0;
     width: 280px; height: 280px;
     z-index: 1;
-   }
+}
 
 .card__title {
     font-family: $font-secondary;
@@ -149,18 +146,7 @@ position: relative;
     position: relative;
 }
 
-.card__icon-arrow {
-    fill: $btn-secondary-accent-color;
-}
-
 .card-btn{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
 }
