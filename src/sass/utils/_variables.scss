@@ -1,6 +1,5 @@
 /*----------------------- font -----------------------*/
-$font-primary: 'DM Sans',
-    sans-serif;
+$font-primary: 'DM Sans', sans-serif;
 $font-secondary: 'Titan One', cursive, sans-serif;
 
 /*----------------------- breakpoints -----------------------*/
@@ -31,9 +30,11 @@ $btn-primary-accent-color: #d41443;
 $btn-secondary-accent-color: #d41342;
 $btn-primary-light-color: #ffffff;
 $btn-secondary-light-color: #ecebeb;
+$btn-accent-hover-color: #ffa5ba;
 
 /*----------------------- radius -----------------------*/
 $btn-radius: 22px;
+$btn-small-radius: 20px;
 $card-radius: 24px;
 $gallery-primary-img-radius: 20px;
 $gallery-secondary-img-radius: 8px;
