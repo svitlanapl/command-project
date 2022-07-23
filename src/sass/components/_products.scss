@@ -1,0 +1,178 @@
+.product__container {
+
+    justify-content: center;
+    
+    @media screen and (min-width:320px) {
+        max-width: 320px;   
+    }
+    
+    justify-content: center;
+}
+
+// --------------product scss==============
+
+.product {
+background-color: #E5E5E5;
+}
+
+.product__title-wrap{
+padding-top: 60px;
+padding-bottom: 140px;
+display: flex;
+flex-direction: column;
+display: flex;
+justify-content: center;
+}
+
+.product__pre-title {
+font-family:  $font-secondary;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 1.17;
+text-align: center;
+text-transform: uppercase;
+color:$secondary-color;
+
+}
+.product__title {
+font-family: $font-secondary;
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+
+color: $primary-accent-color;
+
+margin-top: 15px;
+margin-bottom: 8px;
+}
+
+.card {
+border-radius: 24px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+width: 100%;
+height: auto;
+padding-top: 140px;
+position: relative;
+margin-bottom: 140px;
+}
+
+.product__item {
+position: relative;
+}
+
+.card--ice-cream:before {
+    content: "";   
+    background: url("../images/daria_img_product_ice_cream_1.png");
+    
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -140px; left: 0;
+    width: 280px; height: 280px;
+    z-index: 1;
+   }
+
+.card--ice-coffee:before {
+    content: "";   
+    background: url("../images/daria_img_product_ice_cream_1.png");
+    // background-size:  auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -140px; left: 0;
+    width: 280px; height: 280px;
+    z-index: 1;
+   }
+.card--milkshakes:before {
+    content: "";   
+    background: url("../images/daria_img_product_ice_cream_1.png");
+    // background-size:  auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -140px; left: 0;
+    width: 280px; height: 280px;
+    z-index: 1;
+   }
+
+.card__title {
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color:$secondary-light-color;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 70px;
+}
+
+.card__text:before {
+    content: " ";
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+
+    margin-top: -32px ;
+
+    display:inline;
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin-top: -38px;
+    margin-left: 127px;
+
+    box-shadow: 
+    10px 0 0 #FFFFFF,
+    20px 0 0 #FFFFFF;
+    z-index:3;
+}
+
+.card__text {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color:$secondary-light-color;
+    position: relative;
+}
+
+.card__icon-arrow {
+    fill: $btn-secondary-accent-color;
+}
+
+.card-btn{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card--ice-cream{
+    background: $primary-bg-color;
+}
+
+.card--ice-coffee {
+    background: $coffe-bg-color;
+}
+
+.card--milkshakes {
+    background: $milkshakes-bg-color;
+}
