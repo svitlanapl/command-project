@@ -1,0 +1,118 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: $primary-bg-color;
+
+  //TODO:
+  // @include tablet {
+  //   position: absolute;
+  // }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+
+  //TODO:
+  // @include tablet {
+  //   padding-top: 35px;
+  // }
+}
+
+.header__burger {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+
+  //TODO:
+  // @include tablet {
+  //   display: none;
+  // }
+}
+
+.header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100vw);
+  transition: transform $animation;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+// === burger start ===
+.burger-button__icon-close {
+  display: none;
+
+  .burger-button.is-open & {
+    display: block;
+  }
+}
+
+.burger-button__icon-menu {
+  display: block;
+  .burger-button.is-open & {
+    display: none;
+  }
+}
+// --- burger end ---
+
+// === menu start ===
+.menu {
+  width: 100vw;
+  height: 100vh;
+  padding: 60px 20px 20px 20px;
+  background-color: $primary-bg-color;
+
+  //TODO:
+  //   @media screen and (min-width: 1200px) {
+  //     display: flex;
+  //     flex-direction: row-reverse;
+  //     margin-left: auto;
+  //   }
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  //TODO:
+  // @include tablet {
+  //   flex-direction: row;
+  //   gap: 35px;
+  // }
+}
+
+.menu__link {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  color: $secondary-light-color;
+  transition: color $animation;
+
+  &:hover,
+  &:focus {
+    color: $primary-accent-color;
+  }
+}
+
+.menu__button {
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  //TODO:
+  // @include tablet {
+  //   margin-left: auto;
+  // }
+}
+// --- menu end ---
