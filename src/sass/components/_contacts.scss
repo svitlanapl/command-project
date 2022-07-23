@@ -1,0 +1,164 @@
+.contacts {
+  background: linear-gradient(
+    to bottom,
+    $secondary-light-color 302px,
+    $about-bg-color 0
+  );
+}
+
+.contacts__list {
+  margin-bottom: 32px;
+}
+
+.contacts__item {
+  max-width: 280px;
+  background: $secondary-light-color;
+  box-shadow: 0px 8px 30px $card-shadow;
+  border-radius: 24px;
+  padding: 40px 32px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .contacts__title-cafe,
+  .contacts__title-foodtruck {
+    border-radius: 4px;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    color: $secondary-light-color;
+    margin-bottom: 20px;
+  }
+
+  .contacts__title-foodtruck {
+    width: 130px;
+    height: 16px;
+    background: #c2e297;
+  }
+
+  .contacts__title-cafe {
+    background-color: #f0d1a5;
+    width: 80px;
+    height: 16px;
+  }
+
+  .contacts__img {
+    display: none;
+  }
+
+  .contacts__title-cafe:hover .contacts__img {
+    display: block;
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  .contacts__title-foodtruck:hover .contacts__img {
+    display: block;
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  .contacts__city {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+    color: $primary-text-color;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .contacts__text {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $text-color;
+    width: 179px;
+    margin-bottom: 24px;
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: 216px;
+      height: 0px;
+      border-bottom: 1px solid #e1e1e1;
+      padding-bottom: 24px;
+    }
+  }
+
+  .contacts__days {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    color: $primary-text-color;
+  }
+
+  .contacts__time-first,
+  .contacts__time-second {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    color: $btn-accent-hover-color;
+  }
+
+  .contacts__time-first {
+    margin-bottom: 8px;
+  }
+
+  .contacts__time-second {
+    margin-bottom: 24px;
+  }
+
+  .contacts__time-first:hover:after,
+  .contacts__time-second:hover:after {
+    content: 'Opening hours can change on official holidays';
+    position: sticky;
+    width: max-content;
+    font-size: 10px;
+    background: #ff72da;
+    color: $secondary-light-color;
+    padding: 4px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: $animation;
+    display: block;
+  }
+
+  .contacts__link {
+    text-decoration: none;
+    color: $text-color;
+    display: block;
+    width: 179px;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    &:not(:last-child)::before {
+      content: '';
+      display: block;
+      width: 216px;
+      height: 0px;
+      border-top: 1px solid #e1e1e1;
+      padding-top: 24px;
+    }
+    &:hover,
+    &:focus {
+      color: $btn-primary-accent-color;
+      transition: $animation;
+    }
+  }
+}
