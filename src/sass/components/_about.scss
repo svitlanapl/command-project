@@ -1,5 +1,6 @@
 .about {
   background: $about-bg-color;
+  padding-bottom: 40px;
 }
 
 .label {
@@ -62,6 +63,7 @@
   color: $text-color;
   position: relative;
   max-width: 220px;
+  margin-bottom: 20px;
 }
 
 // .descbtn {
@@ -100,16 +102,18 @@
   text-align: left;
   position: relative;
   max-width: 320px;
+  background: url(../images/about_img2_mob1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 71px;
 }
 
 .foot_desc::before {
-  background: url(../images/about_img2_mob1x.png);
-  background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 280px;
+  min-height: 133px;
   content: '';
-  top: 111px;
+  top: 365px;
 }
