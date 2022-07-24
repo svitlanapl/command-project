@@ -2,7 +2,7 @@
 
     justify-content: center;
     @media screen and (min-width:320px) {
-        max-width: 320px;   
+        // max-width: 320px;   
     
 }
 }
@@ -71,9 +71,12 @@ position: relative;
     background-image: url("../images/Products-img-1-ice-cream-mob-1x.png");
     background-repeat: no-repeat;
     position: absolute;
-    top: -140px; left: 0;
+    top: -140px;
+    //  left: 0;
     width: 280px; height: 280px;
     z-index: 1;
+    background-position-x: center;
+
 }
 
 // @media (min-device-pixel-ratio: 2), 
@@ -110,9 +113,12 @@ position: relative;
     background: url('../images/Products-img-2-icecoffee-mob-1x.png');
     background-repeat: no-repeat;
     position: absolute;
-    top: -140px; left: 0;
+    top: -140px; 
+    // left: 0;
     width: 280px; height: 280px;
     z-index: 1;
+    background-position-x: center;
+
 }
 
 // @media (min-device-pixel-ratio: 2),
@@ -152,9 +158,12 @@ position: relative;
     background: url("../images/Products-img-3-milkshakes-mob-1x.png");
     background-repeat: no-repeat;
     position: absolute;
-    top: -140px; left: 0;
+    top: -140px;
+    //  left: 0;
     width: 280px; height: 280px;
     z-index: 1;
+    background-position-x: center;
+
 }
 // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi),
 // (min-resolution: 2dppx) {
@@ -234,13 +243,14 @@ position: relative;
     width: 6px;
     border-radius: 50%;
     background-color: #FFFFFF;
+    background-position-x: center;
 
     margin-top: -32px ;
 
     display:inline;
     position:absolute;
     top: 0;
-    left: 0;
+    // left: 0;
     margin-top: -38px;
     margin-left: 127px;
 
@@ -260,6 +270,8 @@ position: relative;
     letter-spacing: 0.04em;
     color:$secondary-light-color;
     position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .card-btn{
