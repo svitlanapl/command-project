@@ -1,14 +1,31 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: rgb(255, 184, 202, 0.3);
-  backdrop-filter: blur(4px);
+  background-color: transparent;
+  transform: translateY(0);
 
   z-index: 10;
+
+  &.is-fixed {
+    position: fixed;
+    transform: translateY(-100%);
+    background-color: rgb(255, 184, 202, 0.4);
+    backdrop-filter: blur(4px);
+
+    &.hide {
+      transform: translateY(-100%);
+      transition: transform $animation;
+    }
+
+    &.show {
+      transform: translateY(0);
+      transition: transform $animation;
+    }
+  }
 
   //TODO:
   // @include tablet {
