@@ -1,0 +1,101 @@
+.about {
+  background: $about-bg-color;
+}
+
+.label {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  padding-top: 60px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-accent-color;
+  margin: 15px 64px 32px 56px;
+}
+
+.desc1 {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  /* or 19px */
+  margin-bottom: 40px;
+  color: $primary-text-color;
+}
+
+#more {
+  display: none;
+}
+
+.img_milk {
+  position: absolute;
+  z-index: 3;
+  top: -50px;
+  left: 0;
+}
+
+.desc2 {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  color: $text-color;
+  position: relative;
+}
+
+.descbtn {
+  background: $about-bg-color;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  color: $primary-accent-color;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.descbtn > p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: baseline;
+  text-align: center;
+  justify-content: center;
+  margin-right: 20px;
+  align-items: baseline;
+}
+
+.foot_desc {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 80px;
+}
