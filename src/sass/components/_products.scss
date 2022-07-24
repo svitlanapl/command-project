@@ -1,6 +1,9 @@
 .product__container {
-
     justify-content: center;
+ 
+    @media screen and (min-width:320px) {
+}
+
 }
 // --------------product scss==============
 
@@ -43,9 +46,20 @@ color: $primary-accent-color;
 
 margin-top: 15px;
 margin-bottom: 8px;
+
+@media screen and (min-width:320px) {
+     
+margin-top: 18px;
+margin-bottom: 20px;
+}
 }
 
 .card {
+    width: 100%;
+    height: auto;
+    padding-top: 140px;
+    position: relative;
+
     border-radius: 24px;
     display: flex;
     flex-direction: column;
@@ -55,18 +69,58 @@ margin-bottom: 8px;
     height: auto;
     padding-top: 140px;
     position: relative;
+    
+
+@media screen and (min-width:768px) {
+   padding-top: 118px;
+   margin-bottom: 0;
+
+    }
+
+}
+
+
+.product__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: column;
+    flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:    16px;
+    flex-wrap: nowrap;
+}
+
 }
 
 .product__item {
 position: relative;
+display: flex;
+ 
 &:not(:last-child){
     padding-bottom: 140px;
 }
+@media screen and (min-width: 768px) {
+   display: flex;
+   padding-bottom: 0;
+   
+&:not(:last-child){
+    padding-bottom: 0;
 }
+
+}
+}
+
+
 
 .card--ice-cream:before {
     content: "";   
     background-image: url("../images/Products-img-1-ice-cream-mob-1x.png");
+    @media screen and (min-width: 768px) {
+        background-image: url("../images/Products-img-1-ice-cream-tab-1x.png");     
+     }
     background-repeat: no-repeat;
     position: absolute;
     top: -140px;
@@ -74,18 +128,30 @@ position: relative;
     width: 280px; height: 280px;
     z-index: 1;
     background-position-x: center;
+
+    @media screen and (min-width: 768px) {
+        width: 224px; height: 224px;
+     }
+
 }
 
 
 .card--ice-coffee:before {
     content: "";    
     background: url('../images/Products-img-2-icecoffee-mob-1x.png');
+    @media screen and (min-width: 768px) {
+        background-image: url("../images/Products-img-2-icecoffee-tab-1x.png");     
+     }
     background-repeat: no-repeat;
     position: absolute;
     top: -140px; 
     width: 280px; height: 280px;
     z-index: 1;
     background-position-x: center;
+
+    @media screen and (min-width: 768px) {
+        width: 224px; height: 224px;    
+        }
 }
 
 
@@ -94,13 +160,21 @@ position: relative;
 .card--milkshakes:before {
     content: "";   
     background: url("../images/Products-img-3-milkshakes-mob-1x.png");
+    @media screen and (min-width: 768px) {
+        background-image: url("../images/Products-img-3-milkshakes-tab-1x.png");     
+     }
     background-repeat: no-repeat;
     position: absolute;
     top: -140px;
-    //  left: 0;
-    width: 280px; height: 280px;
-    z-index: 1;
+   
+    width: 280px; 
+    height: 280px; 
+     z-index: 1;
     background-position-x: center;
+
+    @media screen and (min-width: 768px) {
+    width: 224px; height: 224px;    
+    }
 }
 
 .card__title {
@@ -116,6 +190,12 @@ position: relative;
     position: relative;
     padding-top: 20px;
     margin-bottom: 70px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 0;
+        line-height: 1.76;
+     }
+
 }
 
 .card__text:before {
@@ -155,6 +235,10 @@ position: relative;
 .card-btn{
     margin-top: 40px;
     margin-bottom: 40px;
+@media screen and (min-width: 768px) {
+        margin-top: 32px;
+        
+     }
 }
 
 .card--ice-cream{
@@ -167,6 +251,7 @@ position: relative;
 
 .card--milkshakes {
     background: $milkshakes-bg-color;
+  
 }
 
 
