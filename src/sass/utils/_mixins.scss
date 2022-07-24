@@ -66,3 +66,27 @@
         @content;
     }
 }
+
+//------------- grid -------------//
+@mixin gridRowsColumns ($rows, $columns, $gap) {
+    display: grid;
+    grid-template-rows: #{$rows};
+    grid-template-columns: #{$columns};
+    gap: #{$gap};
+
+    @include minBreakpoints ($tablet) {
+        gap: 6px;
+    }
+
+    @include minBreakpoints ($desktop) {
+        gap: 8px;
+    }
+}
+
+@mixin gridItem ($start-row, $start-col, $end-row, $end-col) {
+    grid-row-start: #{$start-row};
+    grid-column-start: #{$start-col};
+
+    grid-row-end: #{$end-row};
+    grid-column-end: #{$end-col};
+}
