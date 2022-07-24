@@ -13,7 +13,7 @@
   &.is-fixed {
     position: fixed;
     transform: translateY(-100%);
-    background-color: rgb(255, 184, 202, 0.4);
+    background-color: rgb(255, 184, 202, 0.2);
     backdrop-filter: blur(4px);
 
     &.hide {
