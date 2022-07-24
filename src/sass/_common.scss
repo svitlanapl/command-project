@@ -1,4 +1,7 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: $font-primary;
@@ -6,6 +9,10 @@ body {
 
   color: $primary-text-color;
   background-color: #ffffff;
+
+  &.scroll-off {
+    overflow: hidden;
+  }
 }
 
 h1,
