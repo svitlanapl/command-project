@@ -43,15 +43,7 @@
 }
 
 .gallery__grid {
-    @include gridRowsColumns (1fr, 1fr, null);
-
-    @include minBreakpoints ($tablet) {
-        gap: 6px;
-    }
-
-    @include minBreakpoints ($desktop) {
-        gap: 8px;
-    }
+    @include gridRowsColumns (1fr, 1fr, 2px);
 
     &--rows {
         @include gridRowsColumns (1fr 1fr, 1fr, 2px);

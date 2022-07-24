@@ -73,6 +73,14 @@
     grid-template-rows: #{$rows};
     grid-template-columns: #{$columns};
     gap: #{$gap};
+
+    @include minBreakpoints ($tablet) {
+        gap: 6px;
+    }
+
+    @include minBreakpoints ($desktop) {
+        gap: 8px;
+    }
 }
 
 @mixin gridItem ($start-row, $start-col, $end-row, $end-col) {
