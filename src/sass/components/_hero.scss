@@ -5,9 +5,11 @@
   background-color: $primary-bg-color;
   @include tablet {
     padding-top: 43px;
+    min-height: 416px;
   }
   @include desktop {
     padding-top: 58px;
+    min-height: 665px;
   }
 }
 .hero .container {
@@ -64,6 +66,54 @@
     }
   }
 }
+.hero__btn-box {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  gap: 9px;
+  left: 20px;
+  top: 237px;
+  @include tablet {
+    gap: 8px;
+    left: 32px;
+    top: 159px;
+  }
+  @include desktop {
+    gap: 12px;
+    left: 16px;
+    top: 254px;
+  }
+  & .products-btn,
+  & .how-btn {
+    padding: 0;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
+  & .products-btn {
+    width: 61px;
+    height: 24px;
+    @include desktop {
+      width: 107px;
+      height: 40px;
+    }
+  }
+  & .how-btn {
+    width: 83px;
+    height: 24px;
+    @include desktop {
+      width: 138px;
+      height: 40px;
+    }
+  }
+}
+
 .icecream-bg {
   margin: 0 auto;
   padding-left: 81px;
@@ -109,7 +159,7 @@
   bottom: 0;
   @include tablet {
     display: block;
-    top: 246px;
+    top: 203px;
     left: 32px;
   }
   @include desktop {
@@ -144,10 +194,11 @@
     line-height: 1.4;
   }
 }
-.hero__more-btnbtn {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
+.hero__more-btn {
+  background-color: $secondary-light-color;
+  //   width: 18px;
+  //   height: 18px;
+  //   border-radius: 50%;
 }
 .hero__counters-box {
   display: none;
