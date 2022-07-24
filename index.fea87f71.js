@@ -1,0 +1,2 @@
+(()=>{const e={openFranchiseBtn:document.querySelector("[data-franchise-open]"),closeFranchiseBtn:document.querySelector("[data-franchise-close]"),franchise:document.querySelector("[data-franchise]"),body:document.querySelector("body")};function c(){e.franchise.classList.toggle("is-hidden"),e.body.classList.toggle("no-scroll")}e.openFranchiseBtn.addEventListener("click",c),e.closeFranchiseBtn.addEventListener("click",c)})();
+//# sourceMappingURL=index.fea87f71.js.map
