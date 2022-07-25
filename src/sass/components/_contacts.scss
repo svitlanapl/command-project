@@ -1,3 +1,9 @@
+.container {
+  @media screen and (min-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
 .contacts {
   background: linear-gradient(
     to bottom,
@@ -8,23 +14,32 @@
 
 .contacts__list {
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .contacts__item {
-
+  min-width: 280px;
   background: $secondary-light-color;
-  box-shadow: 0px 8px 30px $card-shadow;
+  box-shadow: $card-shadow;
   border-radius: 24px;
   padding: 40px 32px;
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    min-width: 224px;
+    &:not(:last-child) {
+      margin-right: 32px;
+      margin-bottom: 0px;
+    }
   }
 
   .contacts__title-cafe,
   .contacts__title-foodtruck {
     border-radius: 4px;
     font-family: $font-primary;
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
@@ -34,18 +49,30 @@
     letter-spacing: 0.04em;
     color: $secondary-light-color;
     margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 1.86;
+    }
   }
 
   .contacts__title-foodtruck {
     width: 130px;
     height: 16px;
     background: #c2e297;
+    @media screen and (min-width: 768px) {
+      width: 138px;
+      height: 28px;
+    }
   }
 
   .contacts__title-cafe {
     background-color: #f0d1a5;
     width: 80px;
     height: 16px;
+    @media screen and (min-width: 768px) {
+      width: 73px;
+      height: 28px;
+    }
   }
 
   .contacts__img {
@@ -66,7 +93,6 @@
 
   .contacts__city {
     font-family: $font-primary;
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
@@ -74,11 +100,14 @@
     color: $primary-text-color;
     margin-top: 0;
     margin-bottom: 8px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
   }
 
   .contacts__text {
     font-family: $font-primary;
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.5;
@@ -88,30 +117,39 @@
     &:not(:last-child)::after {
       content: '';
       display: block;
-      width: 216px;
+      min-width: 216px;
       height: 0px;
       border-bottom: 1px solid #e1e1e1;
-      padding-bottom: 24px;
+      padding: 0px 32px 24px 32px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.66;
     }
   }
 
   .contacts__days {
     font-family: $font-primary;
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86;
     color: $primary-text-color;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
   }
 
   .contacts__time-first,
   .contacts__time-second {
     font-family: $font-primary;
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86;
     color: $btn-accent-hover-color;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .contacts__time-first {
@@ -143,22 +181,25 @@
     display: block;
     width: 179px;
     font-family: $font-primary;
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.5;
     &:not(:last-child)::before {
       content: '';
       display: block;
-      width: 216px;
+      min-width: 216px;
       height: 0px;
       border-top: 1px solid #e1e1e1;
-      padding-top: 24px;
+      padding: 24px 32px 0px 32px;
     }
     &:hover,
     &:focus {
       color: $btn-primary-accent-color;
       transition: $animation;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.83;
     }
   }
 }
