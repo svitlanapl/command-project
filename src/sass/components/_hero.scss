@@ -189,16 +189,32 @@
   font-size: 8px;
   line-height: 1.5;
   color: $secondary-light-color;
+
   @include desktop {
     font-size: 14px;
     line-height: 1.4;
   }
 }
 .hero__more-btn {
-  background-color: $secondary-light-color;
-  //   width: 18px;
-  //   height: 18px;
-  //   border-radius: 50%;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid $primary-accent-color;
+  border-bottom: 5px solid transparent;
+  @include desktop {
+    border-top: 10px solid transparent;
+    border-left: 20px solid $primary-accent-color;
+    border-bottom: 10px solid transparent;
+  }
+  &.is-show {
+    width: 5px;
+    height: 5px;
+    background-color: $primary-accent-color;
+    @include desktop {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
 .hero__counters-box {
   display: none;
@@ -253,4 +269,9 @@
     width: 30px;
     height: 30px;
   }
+}
+.giphy-embed {
+  display: block;
+  width: 200px;
+  padding: 0;
 }
