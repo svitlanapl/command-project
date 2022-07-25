@@ -1,3 +1,7 @@
+// === Local variables ===
+
+$top-tablet-offset: 24px;
+
 .header {
   position: absolute;
   top: 0;
@@ -12,8 +16,9 @@
 
   &.is-fixed {
     position: fixed;
+    top: 0;
     transform: translateY(-100%);
-    background-color: rgb(255, 184, 202, 0.2);
+    background-color: rgb(255, 184, 202, 0.4);
     backdrop-filter: blur(4px);
 
     &.hide {
@@ -27,10 +32,9 @@
     }
   }
 
-  //TODO:
-  // @include tablet {
-  //   position: absolute;
-  // }
+  @include tablet {
+    top: $top-tablet-offset;
+  }
 }
 
 .header__container {
@@ -44,8 +48,6 @@
 }
 
 .header__burger {
-  position: relative;
-  z-index: 11;
   margin-left: auto;
 
   //TODO:
@@ -54,12 +56,36 @@
   // }
 }
 
-.header__menu {
+.header__button {
+  display: none;
+  min-width: 160px;
+  margin-left: 32px;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+// === burger start ===
+.burger-button {
+  display: block;
+  padding: 10px 0 10px 10px;
+}
+
+// --- burger end ---
+
+// === menu start ===
+.menu {
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  transform: translateX(100vw);
+  right: 0;
+  // bottom: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: auto;
+
+  background-color: $menu-bg-color;
+  transform: translateX(100%);
   transition: transform $animation, visibility $animation;
   visibility: hidden;
 
@@ -67,35 +93,10 @@
     transform: translateX(0);
     visibility: visible;
   }
-}
-
-// === burger start ===
-.burger-button {
-  padding: 10px 0 10px 10px;
-}
-
-.burger-button__icon-close {
-  display: none;
-
-  .burger-button.is-open & {
-    display: block;
+  @include tablet {
+    width: 40%;
+    top: -$top-tablet-offset;
   }
-}
-
-.burger-button__icon-menu {
-  display: block;
-  .burger-button.is-open & {
-    display: none;
-  }
-}
-// --- burger end ---
-
-// === menu start ===
-.menu {
-  width: 100vw;
-  height: 100vh;
-  padding: 60px 20px 20px 20px;
-  background-color: $primary-bg-color;
 
   //TODO:
   //   @media screen and (min-width: 1200px) {
@@ -103,21 +104,48 @@
   //     flex-direction: row-reverse;
   //     margin-left: auto;
   //   }
+
+  .header.is-fixed & {
+    top: 0;
+  }
+}
+.menu__buttons {
+  padding: 10px 20px 20px 20px;
+
+  @include tablet {
+    padding: 10px 34px 20px 34px;
+  }
+}
+.menu__close {
+  margin-left: auto;
+  margin-bottom: 16px;
+}
+
+.menu__button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .menu__list {
   display: flex;
   flex-direction: column;
-  gap: 22px;
 
   //TODO:
-  // @include tablet {
+  // @include desktop {
   //   flex-direction: row;
   //   gap: 35px;
   // }
 }
 
+.menu__item {
+  border-top: 1px solid #e18298;
+  border-bottom: 1px solid #e18298;
+}
+
 .menu__link {
+  display: block;
+  padding: 12px 20px;
   font-family: $font-primary;
   font-weight: 700;
   font-size: 16px;
@@ -131,15 +159,4 @@
   }
 }
 
-.menu__button {
-  margin-bottom: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-
-  //TODO:
-  // @include tablet {
-  //   margin-left: auto;
-  // }
-}
 // --- menu end ---
