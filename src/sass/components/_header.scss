@@ -1,19 +1,30 @@
+// === Local variables ===
+
+$top-tablet-offset: 24px;
+
+// === burger start ===
+.burger-button {
+  display: block;
+  padding: 10px 0 10px 10px;
+}
+
+// --- burger end ---
+
 .header {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  z-index: 10;
+  width: 100%;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: transparent;
-  transform: translateY(0);
-
-  z-index: 10;
 
   &.is-fixed {
     position: fixed;
+    top: 0;
     transform: translateY(-100%);
-    background-color: rgb(255, 184, 202, 0.2);
+    background-color: rgb(255, 184, 202, 0.4);
     backdrop-filter: blur(4px);
 
     &.hide {
@@ -25,92 +36,148 @@
       transform: translateY(0);
       transition: transform $animation;
     }
+
+    @include desktop {
+      background-color: rgb(255, 184, 202, 0.8);
+    }
   }
 
-  //TODO:
-  // @include tablet {
-  //   position: absolute;
-  // }
+  @include tablet {
+    top: $top-tablet-offset;
+  }
 }
 
 .header__container {
   display: flex;
   align-items: center;
 
-  //TODO:
-  // @include tablet {
-  //   padding-top: 35px;
-  // }
+  @include desktop {
+  }
 }
 
 .header__burger {
-  position: relative;
-  z-index: 11;
   margin-left: auto;
 
-  //TODO:
-  // @include tablet {
-  //   display: none;
-  // }
-}
-
-.header__menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateX(100vw);
-  transition: transform $animation;
-
-  &.is-open {
-    transform: translateX(0);
-  }
-}
-
-// === burger start ===
-.burger-button__icon-close {
-  display: none;
-
-  .burger-button.is-open & {
-    display: block;
-  }
-}
-
-.burger-button__icon-menu {
-  display: block;
-  .burger-button.is-open & {
+  @include desktop {
     display: none;
   }
 }
-// --- burger end ---
+
+.header__button {
+  display: none;
+  min-width: 160px;
+  margin-left: 32px;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.header__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $animation, visibility $animation;
+
+  .menu.is-open + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 
 // === menu start ===
 .menu {
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 100vw;
-  height: 100vh;
-  padding: 60px 20px 20px 20px;
-  background-color: $primary-bg-color;
+  min-height: 100vh;
+  z-index: 15;
+  background-color: $menu-bg-color;
+  transform: translateX(100%);
+  transition: transform $animation, visibility $animation;
+  visibility: hidden;
 
-  //TODO:
-  //   @media screen and (min-width: 1200px) {
-  //     display: flex;
-  //     flex-direction: row-reverse;
-  //     margin-left: auto;
-  //   }
+  &.is-open {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  @include tablet {
+    width: 40%;
+  }
+
+  @include desktop {
+    position: static;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    z-index: 10;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+
+    transform: none;
+    visibility: visible;
+  }
+}
+.menu__buttons {
+  padding: 10px 20px 20px 20px;
+
+  @include tablet {
+    padding: 10px 34px 20px 34px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.menu__close {
+  margin-left: auto;
+  margin-bottom: 16px;
+}
+
+.menu__button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .menu__list {
   display: flex;
   flex-direction: column;
-  gap: 22px;
 
-  //TODO:
-  // @include tablet {
-  //   flex-direction: row;
-  //   gap: 35px;
-  // }
+  @include desktop {
+    flex-direction: row;
+    gap: 5px;
+  }
+}
+
+.menu__item {
+  border-top: 1px solid #e18298;
+  border-bottom: 1px solid #e18298;
+
+  @include desktop {
+    border: none;
+  }
 }
 
 .menu__link {
+  display: block;
+  padding: 12px 20px;
+  height: 100%;
   font-family: $font-primary;
   font-weight: 700;
   font-size: 16px;
@@ -122,17 +189,23 @@
   &:focus {
     color: $primary-accent-color;
   }
+
+  @include desktop {
+    padding: 12px 15px;
+
+    // .header.show & {
+    //   color: $primary-accent-color;
+
+    // &::after {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   height: 2px;
+    //   border-radius: 1px;
+    //   background-color: currentColor;
+    // }
+    // }
+  }
 }
 
-.menu__button {
-  margin-bottom: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-
-  //TODO:
-  // @include tablet {
-  //   margin-left: auto;
-  // }
-}
 // --- menu end ---

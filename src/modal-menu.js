@@ -75,20 +75,28 @@
   // --- For Header animation end ---
 
   // === For Menu start ===
-  const menuBtn = document.querySelector('[data-menu-button]');
+  const menuBtnBurger = document.querySelector('[data-burger-button]');
+  const menuBtnClose = document.querySelector('[data-close-button]');
+
   const mobileMenu = document.querySelector('[data-menu]');
   const menuLinks = document.querySelectorAll('.menu__link');
   const body = document.querySelector('body');
 
   for (const element of menuLinks) {
-    element.addEventListener('click', toggleMenu);
+    element.addEventListener('click', closeMenu);
   }
-  menuBtn.addEventListener('click', toggleMenu);
+  menuBtnBurger.addEventListener('click', openMenu);
+  menuBtnClose.addEventListener('click', closeMenu);
 
-  function toggleMenu() {
-    mobileMenu.classList.toggle('is-open');
-    menuBtn.classList.toggle('is-open');
-    body.classList.toggle('scroll-off');
+  function closeMenu() {
+    mobileMenu.classList.remove('is-open');
+    body.classList.remove('scroll-off');
   }
+
+  function openMenu() {
+    mobileMenu.classList.add('is-open');
+    body.classList.add('scroll-off');
+  }
+
   // --- For Menu end ---
 })();
