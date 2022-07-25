@@ -1,12 +1,6 @@
 .product__container {
     justify-content: center;
-    width: 100%;
-    @include tablet {
-        width: 768px;
-    }
-    @include desktop {
-       width: 1200px; 
-    }
+    
 } 
 // --------------product scss==============
 
@@ -16,39 +10,38 @@
 }
 
 .product__title-wrap{
-padding-top: 60px;
-margin-bottom: 148px;
+    padding-top: 60px;
+    margin-bottom: 148px;
 
-display: flex;
-flex-direction: column;
-display: flex;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
 
-@include tablet {
-    margin-bottom: 158px;
-}
-@include desktop {
-    margin-bottom: 281px;
-}
+    @include tablet {
+        margin-bottom: 158px;
+    }
+    @include desktop {
+        margin-bottom: 281px;
+    }
 }
 
-.product__pre-title {
-font-family:  $font-secondary;
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.17;
-text-align: center;
-text-transform: uppercase;
-color:$secondary-color;
-@include tablet {
-    font-size: 26px;
-    line-height: 1.14;
-}
-@include desktop {
-    font-size: 30px;
-     
-}
+    .product__pre-title {
+    font-family:  $font-secondary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+    color:$secondary-color;
+    @include tablet {
+        font-size: 26px;
+        line-height: 1.14;
+    }
+    @include desktop {
+        font-size: 30px;
+    }
 }
 
 .product__title {
@@ -95,17 +88,15 @@ color:$secondary-color;
     padding-top: 160px;
     position: relative;
     
-@include tablet { 
+    @include tablet { 
 
-    padding-top: 118px;
-    margin-bottom: 0;
+        padding-top: 118px;
+        margin-bottom: 0;
+        }
+    @include desktop {
+        padding-top: 165px
     }
-@include desktop {
-    padding-top: 165px
 }
-
-}
-
 
 .product__list{
     display: flex;
@@ -118,8 +109,7 @@ color:$secondary-color;
     justify-content: center;
     gap:    16px;
     flex-wrap: nowrap;
-}
-
+    }
 }
 
 .product__item {
@@ -136,8 +126,7 @@ color:$secondary-color;
     &:not(:last-child){
         padding-bottom: 0;
     }
-
-}
+    }
 }
 
 
@@ -147,36 +136,98 @@ color:$secondary-color;
     
     @include tablet {
     background-image: url("../images/products-img-1-ice-cream-tab-1x.png");     
-     }
-     @include desktop {
+    }
+    @include desktop {
     background-image: url("../images/products-img-1-ice-cream-desk-1x.png"); 
-     }
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & { 
+        background-image: url("../images/products-img-1-ice-cream-mob-2x.png");
+        }
+    }  
+
+    @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), 
+    screen and (min-width: 768px) and (min-resolution: 192dpi), 
+    screen and (min-width: 768px) and (min-resolution: 2dppx) {
+        &{
+        background-image: url("../images/products-img-1-ice-cream-tab-2x.png");
+        }
+    }
+    @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px)  and (min-resolution: 192dpi), 
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+        & {
+        background-image:  url("../images/products-img-1-ice-cream-desk-2x.png");
+        }
+    }
 }
 
 .card--ice-coffee:before {
     
     background: url("../images/products-img-2-icecoffee-mob-1x.png");
-   
+    
     @include tablet { 
     background-image: url("../images/products-img-2-icecoffee-tab-1x.png");     
     }
     @include desktop {
     background-image: url("../images/products-img-2-icecoffee-desk-1x.png")
     }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & { 
+        background-image: url("../images/poducts-img-2-icecoffee-mob-2x.png");
+        }
+    }  
+
+    @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), 
+    screen and (min-width: 768px) and (min-resolution: 192dpi), 
+    screen and (min-width: 768px) and (min-resolution: 2dppx) {
+        &{
+        background-image: url("../images/products-img-2-icecoffee-tab-2x.png");
+        }
+    }
+    @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px)  and (min-resolution: 192dpi), 
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+        & {
+        background-image:  url("../images/products-img-2-icecoffee-desk-2x.png");
+        }
+    }
 }
 
 
 .card--milkshakes:before {
-
     background: url("../images/products-img-3-milkshakes-mob-1x.png");
     
     @include tablet { 
         background-image: url("../images/products-img-3-milkshakes-tab-1x.png");     
-        
     }
     @include desktop {
-        background-image: url("../images/products-img-3-milkshakes-desk-1x.png");
-        
+        background-image: url("../images/products-img-3-milkshakes-desk-1x.png");  
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & { 
+        background-image: url("../images/products-img-3-milkshakes-mob-2x.png");
+        }
+    }
+
+    @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), 
+    screen and (min-width: 768px) and (min-resolution: 192dpi), 
+    screen and (min-width: 768px) and (min-resolution: 2dppx) {
+        &{
+        background-image: url("../images/products-img-3-milkshakes-tab-2x.png");
+        }
+    }
+    @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px)  and (min-resolution: 192dpi), 
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+        & {
+        background-image:  url("../images/products-img-3-milkshakes-desk-2x.png");
+        }
     }
 }
 
@@ -192,7 +243,7 @@ color:$secondary-color;
     height: 280px; 
     z-index: 1;
     background-position-x: center;
-
+    background-size: contain;
     @include tablet { 
         width: 224px; height: 224px;  
         transform: translateY(-138px);
@@ -220,10 +271,10 @@ color:$secondary-color;
 
     @include tablet { 
         padding-top: 0;
-     }
-     @include desktop {
+    }
+    @include desktop {
         font-size: 30px;
-     }
+    }
 }
 
 
@@ -294,5 +345,5 @@ color:$secondary-color;
 
 .card--milkshakes {
     background: $milkshakes-bg-color;
-  
+
 }
