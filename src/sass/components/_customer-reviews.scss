@@ -10,6 +10,16 @@
   }
 }
 
+.container__customer-reviews {
+  @include tablet {
+    padding: 0 74px;
+  }
+
+  @include desktop {
+    padding: 0 116px;
+  }
+}
+
 .slider__items-photo {
   display: flex;
   justify-content: center;
@@ -17,6 +27,10 @@
 
   @include tablet {
     margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
   }
 }
 
@@ -26,7 +40,7 @@
 
 .slider__items-text {
   width: 100%;
-  height: 308px;
+  max-height: 308px;
   padding: 43px 48px 26px 55px;
   margin-bottom: 36px;
   font-family: $font-primary;
@@ -40,11 +54,24 @@
   @include tablet {
     width: 100%;
     height: auto;
-    padding: 37px 51px 44px 45px;
+    min-height: 164px;
+    padding: 20px 6px 36px;
     margin-bottom: 24px;
     font-size: 14px;
     line-height: 2.14;
     letter-spacing: 0.04em;
+    background: #fafafa00;
+  }
+
+  @include desktop {
+    width: 100%;
+    height: 138px;
+    min-height: 0;
+    padding: 32px 74px 31px 72px;
+    margin-bottom: 36px;
+    font-size: 16px;
+    line-height: 1.875;
+    background: #fafafa;
   }
 }
 
@@ -60,13 +87,23 @@
   );
 
   @include tablet {
-    padding: 0 40px;
+    padding: 0 44px 0 49px;
     background: repeating-linear-gradient(
       transparent,
       transparent 29px,
       #e1e1e1 29px,
       #e1e1e1 30px
     );
+
+    @include desktop {
+      padding: 0 35px;
+      background: repeating-linear-gradient(
+        transparent,
+        transparent 29px,
+        #e1e1e1 29px,
+        #e1e1e1 30px
+      );
+    }
   }
 
   &::before {
@@ -87,6 +124,11 @@
       width: 60px;
       top: -18px;
     }
+
+    @include desktop {
+      width: 54px;
+      height: 40px;
+    }
   }
 
   &::after {
@@ -103,6 +145,10 @@
 
     @include tablet {
       margin-top: 40px;
+    }
+
+    @include desktop {
+      margin-top: 47px;
     }
   }
 }
@@ -121,6 +167,11 @@
     font-size: 16px;
     line-height: 1.87;
     margin-bottom: 32px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.85;
   }
 }
 
