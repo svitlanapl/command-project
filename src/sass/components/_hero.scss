@@ -1,41 +1,56 @@
+//local variables
+$hero-top-mobile: 83px;
+$hero-top-tablet: 43px;
+$hero-top-desktop: 58px;
+$hero-height-mobile: 502px;
+$hero-height-tablet: 416px;
+$hero-height-desktop: 665px;
+
 .hero {
-  min-height: 502px;
-  padding-top: 83px;
-  margin: 0 auto;
-  background-color: $primary-bg-color;
+  position: relative;
+  background-color: transparent;
+  min-width: $mobile;
+  // min-height: $hero-height-mobile;
+  padding-top: $hero-top-mobile;
   @include tablet {
-    padding-top: 43px;
-    min-height: 416px;
+    // min-height: $hero-height-tablet;
+    padding-top: $hero-top-tablet;
   }
   @include desktop {
-    padding-top: 58px;
-    min-height: 665px;
+    // min-height: $hero-height-desktop;
+    padding-top: $hero-top-desktop;
   }
 }
+
 .hero .container {
-  position: relative;
-  overflow-x: clip;
-  @media screen and (max-width: 402px) {
-    padding-left: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  min-height: $hero-height-mobile - $hero-top-mobile;
+  @include tablet {
+    min-height: $hero-height-tablet - $hero-top-tablet;
+  }
+  @include desktop {
+    min-height: $hero-height-desktop - $hero-top-desktop;
   }
 }
+
 .hero__title-box {
-  position: absolute;
-  top: 111px;
-  left: 20px;
-  z-index: 2;
   max-width: 218px;
   @include tablet {
-    top: 59px;
-    left: 32px;
     max-width: 162px;
   }
   @include desktop {
-    top: 93px;
-    left: 16px;
     max-width: 277px;
   }
 }
+
 .hero__title {
   font-family: $font-secondary;
   font-style: normal;
@@ -66,22 +81,12 @@
     }
   }
 }
+
 .hero__btn-box {
   display: flex;
-  position: absolute;
-  z-index: 2;
-  gap: 9px;
-  left: 20px;
-  top: 237px;
-  @include tablet {
-    gap: 8px;
-    left: 32px;
-    top: 159px;
-  }
+  gap: 8px;
   @include desktop {
     gap: 12px;
-    left: 16px;
-    top: 254px;
   }
   & .products-btn,
   & .how-btn {
@@ -114,71 +119,19 @@
   }
 }
 
-.icecream-bg {
-  margin: 0 auto;
-  padding-left: 81px;
-  padding-top: 9px;
-  width: 345px;
-  height: 345px;
-  border-radius: 50%;
-  background-color: $secondary-color;
-  @include tablet {
-    padding-left: 74px;
-    padding-top: 37px;
-    width: 335px;
-    height: 335px;
-    margin-left: 216px;
-  }
-  @include desktop {
-    padding-left: 119px;
-    padding-top: 54px;
-    width: 534px;
-    height: 534px;
-    margin-left: 501px;
-  }
-}
-.girl-img {
+.hero__notice-box {
   display: none;
-  position: absolute;
-  right: 20px;
-  bottom: 0;
   @include tablet {
-    display: block;
-    top: 222px;
-    right: 32px;
-  }
-  @include desktop {
-    top: 369px;
-    right: 16px;
+    display: flex;
   }
 }
-.jug-img {
-  display: none;
-  position: absolute;
-  left: 20px;
-  bottom: 0;
-  @include tablet {
-    display: block;
-    top: 203px;
-    left: 32px;
-  }
-  @include desktop {
-    top: 369px;
-    left: 16px;
-  }
-}
+
 .hero__text-box {
-  display: none;
-  position: absolute;
+  margin: auto;
   @include tablet {
-    display: block;
-    left: 184px;
-    top: 244px;
     width: 114px;
   }
   @include desktop {
-    left: 245px;
-    top: 402px;
     width: 200px;
   }
 }
@@ -195,43 +148,122 @@
     line-height: 1.4;
   }
 }
+
 .hero__more-btn {
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-left: 10px solid $primary-accent-color;
   border-bottom: 5px solid transparent;
+  &:hover,
+  &:focus {
+    border-left-color: hsla(345, 84%, 55%);
+  }
   @include desktop {
     border-top: 10px solid transparent;
     border-left: 20px solid $primary-accent-color;
     border-bottom: 10px solid transparent;
   }
+
   &.is-show {
     width: 5px;
     height: 5px;
     background-color: $primary-accent-color;
+    &:hover,
+    &:focus {
+      background-color: hsla(345, 84%, 55%);
+    }
     @include desktop {
       width: 10px;
       height: 10px;
     }
   }
 }
-.hero__counters-box {
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: $primary-bg-color;
+  min-height: $hero-height-mobile;
+  padding-top: $hero-top-mobile;
+  overflow-x: clip;
+
+  @include tablet {
+    min-height: $hero-height-tablet;
+    padding-top: $hero-top-tablet;
+  }
+  @include desktop {
+    min-height: $hero-height-desktop;
+    padding-top: $hero-top-desktop;
+  }
+}
+.container-bg {
+  width: 100vw;
+  @media screen and (max-width: 402px) {
+    padding-left: 36px;
+  }
+  @include tablet {
+    padding-left: 63px;
+  }
+  @include desktop {
+    padding-left: 334px;
+  }
+}
+
+.hero__icecream-bg {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vw;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  @include mobile {
+    width: 345px;
+    height: 345px;
+  }
+  @include tablet {
+    width: 335px;
+    height: 335px;
+  }
+  @include desktop {
+    width: 534px;
+    height: 534px;
+  }
+}
+
+.hero__icecream-img {
+  transform: translate(22%, 10%);
+}
+
+.hero__jug-img {
   display: none;
   @include tablet {
     display: block;
-    position: absolute;
-    right: 32px;
-    top: 92px;
+  }
+}
+
+.hero__right-box {
+  display: none;
+  // min-height: $hero-height-mobile;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // align-items: flex-end;
+    gap: 11%;
+    // min-height: $hero-height-tablet;
     text-align: right;
   }
   @include desktop {
-    right: 16px;
-    top: 102px;
+    // min-height: $hero-height-desktop;
   }
 }
+
 .cafes-counter,
 .trucks-counter {
+  position: relative;
+  padding-right: 6%;
   font-family: $font-primary;
   font-style: normal;
   font-weight: 400;
@@ -242,6 +274,9 @@
     font-size: 14px;
     line-height: 1.28;
   }
+}
+.cafes-counter {
+  margin-bottom: 16px;
 }
 .cafes-number,
 .trucks-number {
@@ -260,6 +295,10 @@
 .cafes-counter::before,
 .trucks-counter::before {
   content: '';
+  position: absolute;
+  top: -3%;
+  right: 0;
+  z-index: -1;
   display: block;
   width: 16px;
   height: 16px;
@@ -270,8 +309,16 @@
     height: 30px;
   }
 }
-.giphy-embed {
-  display: block;
-  width: 200px;
-  padding: 0;
+
+.hero__girl-img {
+  display: none;
+  @include tablet {
+    display: block;
+  }
 }
+
+// .giphy-embed {
+//   display: block;
+//   width: 200px;
+//   padding: 0;
+// }

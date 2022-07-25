@@ -1,136 +1,153 @@
 <section class="hero" id="home">
   <div class="container">
-    <div class="hero__title-box">
-      <h1 class="hero__title">
-        Ice cream made with
-        <span>passion</span>
-      </h1>
+    <div class="hero__left-box">
+      <div class="hero__title-box">
+        <h1 class="hero__title">
+          Ice cream made with
+          <span>passion</span>
+        </h1>
+      </div>
+
+      <ul class="hero__btn-box">
+        <li>
+          <a href="#products" class="button button--accent products-btn"
+            >Products
+          </a>
+        </li>
+        <li>
+          <a href="#about-us" class="button how-btn">How it's made? </a>
+        </li>
+      </ul>
+
+      <div class="hero__notice-box">
+        <picture>
+          <source
+            srcset="
+              ./images/jug1x-d.png 1x,
+              ./images/jug2x-d.png 2x,
+              ./images/jug3x-d.png 3x,
+              ./images/jug4x-d.png 4x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/jug1x-t.png 1x,
+              ./images/jug2x-t.png 2x,
+              ./images/jug3x-t.png 3x,
+              ./images/jug4x-t.png 4x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./images/jug1x-t.png"
+            alt="jug"
+            sizes="(min-width: 1200px) 190px,
+             (min-width: 768px) 304px,
+             100vw"
+            class="hero__jug-img"
+          />
+        </picture>
+
+        <div class="hero__text-box">
+          <p class="hero__text is-show">
+            Ice cream is a sweetened frozen food typically eaten as a snack or
+            dessert. It made from milk and is flavoured with a sweetener, cocoa
+            or vanilla, strawberries or peaches.
+          </p>
+          <button type="button" class="hero__more-btn">
+            <div class="triangle"></div>
+          </button>
+        </div>
+      </div>
     </div>
-    <ul class="hero__btn-box">
-      <li>
-        <a href="#products" class="button button--accent products-btn"
-          >Products
-        </a>
-      </li>
-      <li>
-        <a href="#about-us" class="button how-btn">How it's made? </a>
-      </li>
-    </ul>
-    <div class="icecream-bg">
+
+    <div class="hero__right-box">
+      <ul class="hero__counters-box">
+        <li class="cafes-counter">
+          <p class="cafes-number">16</p>
+          cafes
+        </li>
+        <li class="trucks-counter">
+          <p class="trucks-number">23</p>
+          food trucks
+        </li>
+      </ul>
+
       <picture>
         <source
           srcset="
-            ./images/icecream1x-d.png 1x,
-            ./images/icecream2x-d.png 2x,
-            ./images/icecream3x-d.png 3x,
-            ./images/icecream4x-d.png 4x
+            ./images/girl1x-d.png 1x,
+            ./images/girl2x-d.png 2x,
+            ./images/girl3x-d.png 3x,
+            ./images/girl4x-d.png 4x
           "
           media="(min-width: 1200px)"
         />
         <source
           srcset="
-            ./images/icecream1x-t.png 1x,
-            ./images/icecream2x-t.png 2x,
-            ./images/icecream3x-t.png 3x,
-            ./images/icecream4x-t.png 4x
+            ./images/girl1x-t.png 1x,
+            ./images/girl2x-t.png 2x,
+            ./images/girl3x-t.png 3x,
+            ./images/girl4x-t.png 4x
           "
           media="(min-width: 768px)"
         />
-        <source
-          srcset="
-            ./images/icecream1x-m.png 1x,
-            ./images/icecream2x-m.png 2x,
-            ./images/icecream3x-m.png 3x,
-            ./images/icecream4x-m.png 4x
-          "
-          media="(min-width: 320px)"
-        />
         <img
-          src="./images/icecream1x-m.png"
-          alt="Ice cream"
-          sizes="(min-width: 1200px) 236px,
-             (min-width: 768px) 150px,
-             (min-width: 320px) 171px,
+          src="./images/girl1x-t.png"
+          alt="jug"
+          sizes="(min-width: 1200px) 213px,
+             (min-width: 768px) 152px,
              100vw"
+          class="hero__girl-img"
         />
       </picture>
     </div>
-    <div class="hero__text-box">
-      <p class="hero__text is-show">
-        Ice cream is a sweetened frozen food typically eaten as a snack or
-        dessert. It made from milk and is flavoured with a sweetener, cocoa or
-        vanilla, strawberries or peaches.
-      </p>
-      <button type="button" class="hero__more-btn">
-        <div class="triangle"></div>
-      </button>
-    </div>
-    <ul class="hero__counters-box">
-      <li class="cafes-counter">
-        <p class="cafes-number">16</p>
-        cafes
-      </li>
-      <li class="trucks-counter">
-        <p class="trucks-number">23</p>
-        food trucks
-      </li>
-    </ul>
-    <picture>
-      <source
-        srcset="
-          ./images/jug1x-d.png 1x,
-          ./images/jug2x-d.png 2x,
-          ./images/jug3x-d.png 3x,
-          ./images/jug4x-d.png 4x
-        "
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="
-          ./images/jug1x-t.png 1x,
-          ./images/jug2x-t.png 2x,
-          ./images/jug3x-t.png 3x,
-          ./images/jug4x-t.png 4x
-        "
-        media="(min-width: 768px)"
-      />
-      <img
-        src="./images/jug1x-t.png"
-        alt="jug"
-        sizes="(min-width: 1200px) 190px,
-             (min-width: 768px) 304px,
-             100vw"
-        class="jug-img"
-      />
-    </picture>
 
-    <picture>
-      <source
-        srcset="
-          ./images/girl1x-d.png 1x,
-          ./images/girl2x-d.png 2x,
-          ./images/girl3x-d.png 3x,
-          ./images/girl4x-d.png 4x
-        "
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="
-          ./images/girl1x-t.png 1x,
-          ./images/girl2x-t.png 2x,
-          ./images/girl3x-t.png 3x,
-          ./images/girl4x-t.png 4x
-        "
-        media="(min-width: 768px)"
-      />
-      <img
-        src="./images/girl1x-t.png"
-        alt="jug"
-        sizes="(min-width: 1200px) 213px,
-             (min-width: 768px) 152px,
+    <div class="hero__background">
+      <div class="container-bg">
+        <div class="hero__icecream-bg">
+          <div class="hero__icecream-img">
+            <picture>
+              <source
+                srcset="
+                  ./images/icecream1x-d.png 1x,
+                  ./images/icecream2x-d.png 2x,
+                  ./images/icecream3x-d.png 3x,
+                  ./images/icecream4x-d.png 4x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                  ./images/icecream1x-t.png 1x,
+                  ./images/icecream2x-t.png 2x,
+                  ./images/icecream3x-t.png 3x,
+                  ./images/icecream4x-t.png 4x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/icecream1x-m.png 1x,
+                  ./images/icecream2x-m.png 2x,
+                  ./images/icecream3x-m.png 3x,
+                  ./images/icecream4x-m.png 4x
+                "
+                media="(min-width: 320px)"
+              />
+              <img
+                src="./images/icecream1x-m.png"
+                alt="Ice cream"
+                sizes="(min-width: 1200px) 236px,
+             (min-width: 768px) 150px,
+             (min-width: 320px) 171px,
              100vw"
-        class="girl-img"
-      />
-    </picture>
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
