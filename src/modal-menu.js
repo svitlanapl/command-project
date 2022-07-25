@@ -83,13 +83,20 @@
   const body = document.querySelector('body');
 
   for (const element of menuLinks) {
-    element.addEventListener('click', toggleMenu);
+    element.addEventListener('click', closeMenu);
   }
-  menuBtnBurger.addEventListener('click', toggleMenu);
-  menuBtnClose.addEventListener('click', toggleMenu);
-  function toggleMenu() {
-    mobileMenu.classList.toggle('is-open');
-    body.classList.toggle('scroll-off');
+  menuBtnBurger.addEventListener('click', openMenu);
+  menuBtnClose.addEventListener('click', closeMenu);
+
+  function closeMenu() {
+    mobileMenu.classList.remove('is-open');
+    body.classList.remove('scroll-off');
   }
+
+  function openMenu() {
+    mobileMenu.classList.add('is-open');
+    body.classList.add('scroll-off');
+  }
+
   // --- For Menu end ---
 })();
