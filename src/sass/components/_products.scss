@@ -119,10 +119,10 @@
 
 .card--ice-cream:before {
     content: "";
-    // background-image: url("./images/products-img-1-ice-cream-mob-1x.png");
+    background-image: url("../images/products-img-1-ice-cream-mob-1x.png");
 
     @media screen and (min-width: 768px) {
-        // background-image: url("./images/products-img-1-ice-cream-tab-1x.png");
+        background-image: url("../images/products-img-1-ice-cream-tab-1x.png");
     }
 
     background-repeat: no-repeat;
@@ -144,10 +144,10 @@
 
 .card--ice-coffee:before {
     content: "";
-    // background: url('../images/products-img-2-icecoffee-mob-1x.png');
+    background: url('../images/products-img-2-icecoffee-mob-1x.png');
 
     @media screen and (min-width: 768px) {
-        // background-image: url("../images/products-img-2-icecoffee-tab-1x.png");
+        background-image: url("../images/products-img-2-icecoffee-tab-1x.png");
     }
 
     background-repeat: no-repeat;
@@ -169,10 +169,10 @@
 
 .card--milkshakes:before {
     content: "";
-    // background: url("../images/products-img-3-milkshakes-mob-1x.png");
+    background: url("../images/products-img-3-milkshakes-mob-1x.png");
 
     @media screen and (min-width: 768px) {
-        // background-image: url("../images/products-img-3-milkshakes-tab-1x.png");
+        background-image: url("../images/products-img-3-milkshakes-tab-1x.png");
     }
 
     background-repeat: no-repeat;
