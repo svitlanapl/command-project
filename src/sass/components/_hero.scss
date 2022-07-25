@@ -1,23 +1,20 @@
-//local variables
+// =====  local variables
 $hero-top-mobile: 83px;
 $hero-top-tablet: 43px;
 $hero-top-desktop: 58px;
 $hero-height-mobile: 502px;
 $hero-height-tablet: 416px;
 $hero-height-desktop: 665px;
-
+// ======
 .hero {
   position: relative;
   background-color: transparent;
   min-width: $mobile;
-  // min-height: $hero-height-mobile;
   padding-top: $hero-top-mobile;
   @include tablet {
-    // min-height: $hero-height-tablet;
     padding-top: $hero-top-tablet;
   }
   @include desktop {
-    // min-height: $hero-height-desktop;
     padding-top: $hero-top-desktop;
   }
 }
@@ -62,7 +59,7 @@ $hero-height-desktop: 665px;
   color: $secondary-light-color;
   & span {
     font-size: 48px;
-    color: #d41443;
+    color: $primary-accent-color;
   }
   @include tablet {
     font-size: 22px;
@@ -155,6 +152,7 @@ $hero-height-desktop: 665px;
   border-top: 5px solid transparent;
   border-left: 10px solid $primary-accent-color;
   border-bottom: 5px solid transparent;
+  transition: border-left-color $animation;
   &:hover,
   &:focus {
     border-left-color: hsla(345, 84%, 55%);
@@ -169,6 +167,7 @@ $hero-height-desktop: 665px;
     width: 5px;
     height: 5px;
     background-color: $primary-accent-color;
+    transition: background-color $animation;
     &:hover,
     &:focus {
       background-color: hsla(345, 84%, 55%);
@@ -201,9 +200,7 @@ $hero-height-desktop: 665px;
 }
 .container-bg {
   width: 100vw;
-  @media screen and (max-width: 402px) {
-    padding-left: 36px;
-  }
+  padding-left: 36px;
   @include tablet {
     padding-left: 63px;
   }
@@ -214,8 +211,8 @@ $hero-height-desktop: 665px;
 
 .hero__icecream-bg {
   margin: 0 auto;
-  width: 100vw;
-  height: 100vw;
+  width: 345px;
+  height: 345px;
   border-radius: 50%;
   background-color: $secondary-color;
   @include mobile {
@@ -245,18 +242,14 @@ $hero-height-desktop: 665px;
 
 .hero__right-box {
   display: none;
-  // min-height: $hero-height-mobile;
   @include tablet {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    // align-items: flex-end;
     gap: 11%;
-    // min-height: $hero-height-tablet;
     text-align: right;
   }
   @include desktop {
-    // min-height: $hero-height-desktop;
   }
 }
 
@@ -285,7 +278,7 @@ $hero-height-desktop: 665px;
   font-weight: 400;
   font-size: 28px;
   line-height: 1.14;
-  color: #d41443;
+  color: $primary-accent-color;
   @include desktop {
     font-size: 46px;
     line-height: 1.15;
@@ -316,9 +309,3 @@ $hero-height-desktop: 665px;
     display: block;
   }
 }
-
-// .giphy-embed {
-//   display: block;
-//   width: 200px;
-//   padding: 0;
-// }
