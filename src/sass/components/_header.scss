@@ -58,15 +58,22 @@
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   transform: translateX(100vw);
-  transition: transform $animation;
+  transition: transform $animation, visibility $animation;
+  visibility: hidden;
 
   &.is-open {
     transform: translateX(0);
+    visibility: visible;
   }
 }
 
 // === burger start ===
+.burger-button {
+  padding: 10px 0 10px 10px;
+}
+
 .burger-button__icon-close {
   display: none;
 
