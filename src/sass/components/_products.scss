@@ -143,39 +143,39 @@ color:$secondary-color;
 
 .card--ice-cream:before {
     
-    background-image: url("../images/products-img1-ice-cream-mob-1x.png");
+    background-image: url("../images/products-img-1-ice-cream-mob-1x.png");
     
     @include tablet {
-    background-image: url("../images/products-img1-ice-cream-tab-1x.png");     
+    background-image: url("../images/products-img-1-ice-cream-tab-1x.png");     
      }
      @include desktop {
-    background-image: url("../images/products-img1-ice-cream-desk-1x.png"); 
+    background-image: url("../images/products-img-1-ice-cream-desk-1x.png"); 
      }
 }
 
 .card--ice-coffee:before {
     
-    background: url('../images/products-img2-icecoffee-mob-1x.png');
+    background: url('../images/products-img-2-icecoffee-mob-1x.png');
    
     @include tablet { 
-    background-image: url("../images/products-img2-icecoffee-tab-1x.png");     
+    background-image: url("../images/products-img-2-icecoffee-tab-1x.png");     
     }
     @include desktop {
-    background-image: url("../images/products-img2-icecoffee-desk-1x.png")
+    background-image: url("../images/products-img-2-icecoffee-desk-1x.png")
     }
 }
 
 
 .card--milkshakes:before {
 
-    background: url("../images/products-img3-milkshakes-mob-1x.png");
+    background: url("../images/products-img-3-milkshakes-mob-1x.png");
     
     @include tablet { 
-        background-image: url("../images/products-img3-milkshakes-tab-1x.png");     
+        background-image: url("../images/products-img-3-milkshakes-tab-1x.png");     
         
     }
     @include desktop {
-        background-image: url("../images/products-img3-milkshakes-desk-1x.png");
+        background-image: url("../images/products-img-3-milkshakes-desk-1x.png");
         
     }
 }
