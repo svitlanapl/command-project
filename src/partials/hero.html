@@ -1,10 +1,10 @@
 <section class="hero" id="home">
-  <div class="container">
+  <div class="container hero__container">
     <div class="hero__left-box">
       <div class="hero__title-box">
-        <h1 class="hero__title">
+        <h1 id="heroTitle" class="hero__title">
           Ice cream made with
-          <span>passion</span>
+          <span class="passion">passion</span>
         </h1>
       </div>
 
@@ -55,21 +55,28 @@
             dessert. It made from milk and is flavoured with a sweetener, cocoa
             or vanilla, strawberries or peaches.
           </p>
-          <button type="button" class="hero__more-btn">
-            <div class="triangle"></div>
-          </button>
+          <iframe
+            src="https://giphy.com/embed/GB91uLrgyuul2"
+            frameborder="0"
+            class="hero__giphy"
+          >
+          </iframe>
+          <button type="button" class="hero__more-btn"></button>
+          <div class="hero__more-btn__text">
+            You can see it on the descktop pc only ;)
+          </div>
         </div>
       </div>
     </div>
 
     <div class="hero__right-box">
       <ul class="hero__counters-box">
-        <li class="cafes-counter">
-          <p class="cafes-number">16</p>
+        <li class="hero__counter">
+          <div data-cafes class="counter-number">16</div>
           cafes
         </li>
-        <li class="trucks-counter">
-          <p class="trucks-number">23</p>
+        <li class="hero__counter">
+          <div data-trucks class="counter-number">23</div>
           food trucks
         </li>
       </ul>
@@ -107,7 +114,7 @@
     <div class="hero__background">
       <div class="container-bg">
         <div class="hero__icecream-bg">
-          <div class="hero__icecream-img">
+          <div id="heroIcecream" class="hero__icecream-img">
             <picture>
               <source
                 srcset="

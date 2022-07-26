@@ -1,30 +1,48 @@
-//local variables
+// =====  local variables
 $hero-top-mobile: 83px;
 $hero-top-tablet: 43px;
 $hero-top-desktop: 58px;
 $hero-height-mobile: 502px;
 $hero-height-tablet: 416px;
 $hero-height-desktop: 665px;
+// ======
 
 .hero {
   position: relative;
   background-color: transparent;
   min-width: $mobile;
-  // min-height: $hero-height-mobile;
   padding-top: $hero-top-mobile;
   @include tablet {
-    // min-height: $hero-height-tablet;
     padding-top: $hero-top-tablet;
   }
   @include desktop {
-    // min-height: $hero-height-desktop;
     padding-top: $hero-top-desktop;
   }
 }
 
-.hero .container {
+.hero__container {
   display: flex;
   justify-content: space-between;
+
+  // =====  need delete
+  // width: 100%;
+  // margin: 0 auto;
+  // padding: 0 20px;
+
+  // @include minBreakpoints(425px) {
+  //   width: 425px;
+  // }
+
+  // @include minBreakpoints($tablet) {
+  //   width: $tablet;
+  //   padding: 0 32px;
+  // }
+
+  // @include minBreakpoints($desktop) {
+  //   width: $desktop;
+  //   padding: 0 16px;
+  // }
+  // // =====
 }
 
 .hero__left-box {
@@ -34,6 +52,7 @@ $hero-height-desktop: 665px;
   gap: 20px;
   min-height: $hero-height-mobile - $hero-top-mobile;
   @include tablet {
+    padding-top: 20px;
     min-height: $hero-height-tablet - $hero-top-tablet;
   }
   @include desktop {
@@ -60,9 +79,10 @@ $hero-height-desktop: 665px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $secondary-light-color;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
   & span {
     font-size: 48px;
-    color: #d41443;
+    color: $primary-accent-color;
   }
   @include tablet {
     font-size: 22px;
@@ -127,7 +147,6 @@ $hero-height-desktop: 665px;
 }
 
 .hero__text-box {
-  margin: auto;
   @include tablet {
     width: 114px;
   }
@@ -144,39 +163,75 @@ $hero-height-desktop: 665px;
   color: $secondary-light-color;
 
   @include desktop {
+    padding: 10px;
     font-size: 14px;
     line-height: 1.4;
+    &:not(.is-show) {
+      display: none;
+    }
+  }
+}
+
+.hero__more-btn__text {
+  display: none;
+}
+
+.hero__giphy {
+  display: none;
+  pointer-events: none;
+  &.is-show {
+    @include desktop {
+      display: block;
+    }
+    & ~ .hero__more-btn__text {
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 1.5;
+      color: $secondary-light-color;
+
+      @include tablet {
+        display: block;
+        @include desktop {
+          display: none;
+        }
+      }
+    }
   }
 }
 
 .hero__more-btn {
   width: 0;
   height: 0;
-  border-top: 5px solid transparent;
-  border-left: 10px solid $primary-accent-color;
-  border-bottom: 5px solid transparent;
+  border-top: 9px solid transparent;
+  border-left: 18px solid $primary-accent-color;
+  border-bottom: 9px solid transparent;
+  transition: border-left-color $animation;
   &:hover,
   &:focus {
     border-left-color: hsla(345, 84%, 55%);
   }
   @include desktop {
-    border-top: 10px solid transparent;
-    border-left: 20px solid $primary-accent-color;
-    border-bottom: 10px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 26px solid $primary-accent-color;
+    border-bottom: 13px solid transparent;
   }
 
   &.is-show {
-    width: 5px;
-    height: 5px;
+    width: 18px;
+    height: 18px;
     background-color: $primary-accent-color;
-    &:hover,
-    &:focus {
-      background-color: hsla(345, 84%, 55%);
-    }
+    border-left-color: $primary-accent-color;
+    transition: background-color $animation;
     @include desktop {
-      width: 10px;
-      height: 10px;
+      width: 26px;
+      height: 26px;
     }
+  }
+  &:hover.is-show,
+  &:focus.is-show {
+    background-color: hsla(345, 84%, 55%);
   }
 }
 
@@ -201,11 +256,9 @@ $hero-height-desktop: 665px;
 }
 .container-bg {
   width: 100vw;
-  @media screen and (max-width: 402px) {
-    padding-left: 36px;
-  }
+  padding-left: 36px;
   @include tablet {
-    padding-left: 63px;
+    padding-left: 65px;
   }
   @include desktop {
     padding-left: 334px;
@@ -214,8 +267,8 @@ $hero-height-desktop: 665px;
 
 .hero__icecream-bg {
   margin: 0 auto;
-  width: 100vw;
-  height: 100vw;
+  width: 345px;
+  height: 345px;
   border-radius: 50%;
   background-color: $secondary-color;
   @include mobile {
@@ -234,6 +287,8 @@ $hero-height-desktop: 665px;
 
 .hero__icecream-img {
   transform: translate(22%, 10%);
+  // transition: transform $animation;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero__jug-img {
@@ -245,25 +300,21 @@ $hero-height-desktop: 665px;
 
 .hero__right-box {
   display: none;
-  // min-height: $hero-height-mobile;
   @include tablet {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    // align-items: flex-end;
     gap: 11%;
-    // min-height: $hero-height-tablet;
     text-align: right;
   }
   @include desktop {
-    // min-height: $hero-height-desktop;
   }
 }
 
-.cafes-counter,
-.trucks-counter {
+.hero__counter {
   position: relative;
   padding-right: 6%;
+  margin-bottom: 16px;
   font-family: $font-primary;
   font-style: normal;
   font-weight: 400;
@@ -275,25 +326,8 @@ $hero-height-desktop: 665px;
     line-height: 1.28;
   }
 }
-.cafes-counter {
-  margin-bottom: 16px;
-}
-.cafes-number,
-.trucks-number {
-  font-family: $font-secondary;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1.14;
-  color: #d41443;
-  @include desktop {
-    font-size: 46px;
-    line-height: 1.15;
-  }
-}
 
-.cafes-counter::before,
-.trucks-counter::before {
+.hero__counter::before {
   content: '';
   position: absolute;
   top: -3%;
@@ -310,15 +344,22 @@ $hero-height-desktop: 665px;
   }
 }
 
+.counter-number {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  color: $primary-accent-color;
+  @include desktop {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+}
+
 .hero__girl-img {
   display: none;
   @include tablet {
     display: block;
   }
 }
-
-// .giphy-embed {
-//   display: block;
-//   width: 200px;
-//   padding: 0;
-// }
