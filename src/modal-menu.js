@@ -29,26 +29,10 @@
     const heroHeight = heroSection.offsetHeight;
     const headerHeight = headerSection.offsetHeight;
     const scrollPosition = window.scrollY;
-    let headerPosition = headerSection.offsetTop;
+    const scrollOffset = scrollPosition - previousPosition;
+    let headerOffset = headerSection.offsetTop - scrollOffset;
 
-    if (scrollPosition > previousPosition) {
-      if (headerSection.classList.contains('header--fixed')) {
-        headerSection.classList.remove('header--fixed');
-        headerSection.style.top = scrollPosition + 'px';
-      }
-      if (scrollPosition > headerSection.offsetTop + headerHeight) {
-        headerSection.style.top = scrollPosition - headerHeight + 'px';
-      }
-    } else {
-      console.log('back');
-      if (scrollPosition <= headerPosition) {
-        headerSection.classList.add('header--fixed');
-        headerSection.style.top = 0;
-      }
-    }
-    previousPosition = scrollPosition;
-
-    if (scrollPosition <= heroHeight && scrollPosition > headerHeight) {
+    if (scrollPosition > headerHeight && scrollPosition <= heroHeight) {
       headerSection.classList.add('header--hidden');
     } else {
       headerSection.classList.remove('header--hidden');
@@ -59,7 +43,21 @@
     } else {
       headerSection.classList.remove('header--background');
     }
+
+    if (scrollPosition > previousPosition) {
+      if (headerOffset < -headerHeight) {
+        headerOffset = -headerHeight;
+      }
+    } else {
+      if (headerOffset > 0) {
+        headerOffset = 0;
+      }
+    }
+    headerSection.style.top = headerOffset + 'px';
+
+    previousPosition = scrollPosition;
   }
+
   // === Desktop ===
   function scrollHandlerDesktop() {
     const scrollPosition = scrollY;
@@ -78,56 +76,6 @@
     } else {
       headerSection.classList.remove('header--background');
     }
-  }
-
-  // === Mobile ===
-  function scrollHandlerMobileAlt() {
-    const currentPosition = scrollY;
-    const headerSectionHeight = headerSection.offsetHeight;
-    const heroSectionHeight = heroSection.offsetHeight;
-
-    if (currentPosition < headerSectionHeight) {
-      makeAbsoluteHeader();
-    } else if (
-      currentPosition >= headerSectionHeight &&
-      currentPosition < heroSectionHeight - headerSectionHeight
-    ) {
-      fixHeader();
-    } else if (
-      currentPosition >= heroSectionHeight - headerSectionHeight &&
-      currentPosition < heroSectionHeight
-    ) {
-      hideHeader();
-    } else if (currentPosition >= heroSectionHeight) {
-      if (currentPosition < previousPosition) {
-        showHeader();
-      } else {
-        hideHeader();
-      }
-    }
-    previousPosition = currentPosition;
-  }
-
-  function makeAbsoluteHeader() {
-    headerSection.classList.remove('is-fixed');
-    headerSection.classList.remove('show');
-    headerSection.classList.remove('hide');
-  }
-
-  function fixHeader() {
-    headerSection.classList.add('is-fixed');
-    headerSection.classList.remove('show');
-    headerSection.classList.remove('hide');
-  }
-
-  function hideHeader() {
-    headerSection.classList.remove('show');
-    headerSection.classList.add('hide');
-  }
-
-  function showHeader() {
-    headerSection.classList.add('show');
-    headerSection.classList.remove('hide');
   }
   // --- For Header animation end ---
 
