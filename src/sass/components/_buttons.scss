@@ -59,7 +59,11 @@
 
     &:hover,
     &:focus {
-      background-color: hsla(345, 84%, 55%);
+      background-color: hsla(345, 84%, 57%);
+    }
+
+    @include tablet {
+      padding: 12px 36px;
     }
   }
 
@@ -69,6 +73,10 @@
     font-size: 8px;
     line-height: 1.25;
     border-radius: $btn-small-radius;
+
+    @include desktop {
+      font-size: 14px;
+    }
   }
 
   &--circle {
