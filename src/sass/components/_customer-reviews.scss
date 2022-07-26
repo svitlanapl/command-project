@@ -76,7 +76,7 @@
 }
 
 .slider__items-review {
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   z-index: 2;
   position: relative;
   background: repeating-linear-gradient(
@@ -123,11 +123,13 @@
     @include tablet {
       width: 60px;
       top: -18px;
+      left: 33px;
     }
 
     @include desktop {
       width: 54px;
       height: 40px;
+      left: 28px;
     }
   }
 
