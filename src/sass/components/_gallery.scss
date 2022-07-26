@@ -8,7 +8,8 @@
     }
 
     @include minBreakpoints ($desktop) {
-        background-image: linear-gradient(to bottom, $about-bg-color 17%, $secondary-light-color 17%);
+        background-image: linear-gradient(to bottom, $about-bg-color 15%, $secondary-light-color 15%);
+        padding-bottom: 120px;
     }
 }
 
@@ -41,7 +42,8 @@
 
     transition: scale $animation;
 
-    &:hover {
+    &:hover,
+    &:focus {
         z-index: 2;
         transform: scale(1.2);
 
