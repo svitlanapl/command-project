@@ -53,6 +53,9 @@
         headerOffset = 0;
       }
     }
+    if (scrollPosition <= 0) {
+      headerOffset = 0;
+    }
     headerSection.style.top = headerOffset + 'px';
 
     previousPosition = scrollPosition;
