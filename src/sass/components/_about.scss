@@ -1,6 +1,22 @@
+
 .about {
   background: $about-bg-color;
   padding-bottom: 40px;
+ 
+}
+.about_div{
+  @include minBreakpoints ($tablet){
+    display: flex;
+
+  }
+}
+
+.about__container{
+  background: url(../images/about_img2_mob1x.png);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 60%;
 }
 
 .label {
@@ -107,10 +123,7 @@
   text-align: left;
   position: relative;
   max-width: 320px;
-  background: url(../images/about_img2_mob1x.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: 71px;
+ 
 }
 
 .foot_desc::before {
