@@ -347,3 +347,33 @@
     background: $milkshakes-bg-color;
 
 }
+//  ------------- mob menu
+ 
+
+
+
+.product-backdrop {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: red;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    
+}
+
+
+.product-backdrop.is-hidden {
+    display: none;
+
+}
+
+.product-modal-menu {
+    width: 100%;
+    height: auto;
+    width: 50px;
+    height: 100px;
+   
+}
