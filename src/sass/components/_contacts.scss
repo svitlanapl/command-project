@@ -10,12 +10,27 @@
     $secondary-light-color 302px,
     $about-bg-color 0
   );
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(
+      to bottom,
+      $secondary-light-color 274px,
+      $about-bg-color 0
+    );
+    @media screen and (min-width: 1200px) {
+      background: linear-gradient(
+        to bottom,
+        $secondary-light-color 100px,
+        $about-bg-color 0
+      );
+    }
+  }
 }
 
 .contacts__list {
   margin-bottom: 32px;
   @media screen and (min-width: 768px) {
     display: flex;
+    margin-bottom: 60px;
   }
 }
 
@@ -33,6 +48,10 @@
     &:not(:last-child) {
       margin-right: 32px;
       margin-bottom: 0px;
+    }
+    @media screen and (min-width: 1200px) {
+      min-width: 368px;
+      padding: 40px;
     }
   }
 
@@ -83,12 +102,23 @@
     display: block;
     position: absolute;
     margin-right: -250px;
+    @media screen and (min-width: 768px) {
+      margin-right: -190px;
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: -230px;
+    }
   }
 
   .contacts__title-foodtruck:hover .contacts__img {
     display: block;
     position: absolute;
     margin-right: -250px;
+    @media screen and (min-width: 1200px) {
+      margin-right: -300px;
+    }
   }
 
   .contacts__city {
@@ -103,6 +133,12 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.86;
+      margin-bottom: 12px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.86;
+      margin-bottom: 8px;
     }
   }
 
@@ -112,12 +148,11 @@
     font-size: 12px;
     line-height: 1.5;
     color: $text-color;
-    width: 179px;
     margin-bottom: 24px;
     &:not(:last-child)::after {
       content: '';
       display: block;
-      min-width: 216px;
+      max-width: 288px;
       height: 0px;
       border-bottom: 1px solid #e1e1e1;
       padding: 0px 32px 24px 32px;
@@ -125,6 +160,12 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.66;
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.83;
+      letter-spacing: 0.06em;
     }
   }
 
@@ -138,6 +179,9 @@
       font-size: 14px;
       line-height: 1.86;
     }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
 
   .contacts__time-first,
@@ -150,14 +194,23 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;
     }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
 
   .contacts__time-first {
     margin-bottom: 8px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 12px;
+    }
   }
 
   .contacts__time-second {
     margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
   }
 
   .contacts__time-first:hover:after,
@@ -173,13 +226,17 @@
     opacity: 0.7;
     transition: $animation;
     display: block;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      width: auto;
+      font-size: 11px;
+    }
   }
 
   .contacts__link {
     text-decoration: none;
     color: $text-color;
     display: block;
-    width: 179px;
     font-family: $font-primary;
     font-weight: 500;
     font-size: 12px;
@@ -187,7 +244,7 @@
     &:not(:last-child)::before {
       content: '';
       display: block;
-      min-width: 216px;
+      max-width: 288px;
       height: 0px;
       border-top: 1px solid #e1e1e1;
       padding: 24px 32px 0px 32px;
@@ -200,6 +257,9 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.83;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
     }
   }
 }
