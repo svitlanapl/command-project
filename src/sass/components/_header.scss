@@ -19,31 +19,32 @@ $top-tablet-offset: 24px;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: transparent;
+  opacity: 1;
+  transition: opacity $animation, background-color $animation;
 
-  &.is-fixed {
-    position: fixed;
-    top: 0;
-    transform: translateY(-100%);
+  &--hidden {
+    opacity: 0;
+  }
+
+  &--background {
     background-color: rgb(255, 184, 202, 0.4);
     backdrop-filter: blur(4px);
-
-    &.hide {
-      transform: translateY(-100%);
-      transition: transform $animation;
-    }
-
-    &.show {
-      transform: translateY(0);
-      transition: transform $animation;
-    }
 
     @include desktop {
       background-color: rgb(255, 184, 202, 0.8);
     }
   }
 
+  &--fixed {
+    position: fixed;
+  }
+
   @include tablet {
     top: $top-tablet-offset;
+  }
+
+  @include desktop {
+    position: fixed;
   }
 }
 
