@@ -155,4 +155,19 @@
     body.classList.add('scroll-off');
   }
   // --- For Menu end ---
+
+  // === Modal window Start ===
+  const buyBtns = document.querySelectorAll('[data-buy-now]');
+  const modalWindow = document.querySelector('[data-franchise]');
+
+  for (const element of buyBtns) {
+    element.addEventListener('click', closeMenu);
+    element.addEventListener('click', toggleFranchise);
+  }
+
+  function toggleFranchise() {
+    modalWindow.classList.toggle('is-hidden');
+    document.body.classList.toggle('no-scroll');
+  }
+  // --- Modal window End ---
 })();
