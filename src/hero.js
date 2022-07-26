@@ -70,5 +70,5 @@
   setTimeout(function () {
     document.getElementById('heroIcecream').style.transform =
       'translate(22%,10%)';
-  }, 8000);
+  }, 6000);
 })();
