@@ -7,10 +7,11 @@
 .product {
     background-color:$secondary-light-color;
     padding-bottom: 60px;
+    padding-top: 60px;
 }
 
 .product__title-wrap{
-    padding-top: 60px;
+    
     margin-bottom: 148px;
 
     display: flex;
@@ -353,7 +354,10 @@
     display: block;
 
     position: fixed;
-    
+
+    visibility: visible;
+    opacity: 1;
+
     top: 0;
     left: 0;
     z-index: 200;
@@ -369,8 +373,9 @@
 
 
 .product-backdrop.is-hidden {
-    display: none;
-
+    // display: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .product-modal-menu {
@@ -396,11 +401,11 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    transition: transform 250ms linear;
+    transition: transform $animation;
 
     @media screen and (max-width: 320px) {
     max-width: 480px;
-    width: 95%;
+    width: 95%; 
     }
   
     @media screen and (min-width: 768px) {
