@@ -11,7 +11,7 @@
 }
 .about-wrap {
   @media screen and (max-width: 1199) {
-    padding-right: 121px;
+    padding-right: 90px;
     padding-left: 99px;
   }
 }
@@ -28,7 +28,8 @@
 
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-y: 82%;
+  background-position-y: 79%;
+  padding-top: 60px;
 
   @media (min-width: 321px) and (max-width: 1279px) {
     background: none;
@@ -50,7 +51,6 @@
   line-height: 1.16;
   text-transform: uppercase;
   color: $secondary-color;
-  padding-top: 60px;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -90,18 +90,17 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-
-  margin-bottom: 40px;
-  color: $primary-text-color;
   max-width: 220px;
-
+  margin-bottom: 32px;
+  color: $primary-text-color;
   @include tablet {
     font-family: $font-primary;
     font-weight: 500;
     font-size: 14px;
     line-height: 176%;
+    max-width: 80%;
     /* or 25px */
-    max-width: 100%;
+    // width: 463px;
     color: $primary-text-color;
   }
 
@@ -111,9 +110,9 @@
     font-size: 16px;
     line-height: 176%;
     /* or 28px */
-
+    max-width: 80%;
     letter-spacing: 0.04em;
-    max-width: 100%;
+    // max-width: 80%;
     color: $primary-text-color;
   }
 }
@@ -125,16 +124,20 @@
 .about-wrap {
   display: flex;
   width: 100%;
+  box-sizing: content-box;
   @include tablet {
     display: flex;
     width: 200%;
-    margin-right: 80px;
+    margin-right: 20px;
+    box-sizing: content-box;
   }
 
   @include desktop {
     display: flex;
-    width: 150%;
-    margin-right: 80px;
+    width: 100%;
+    margin-right: 10px;
+    box-sizing: content-box;
+    padding-left: 40px;
   }
 }
 
@@ -161,7 +164,7 @@
     font-size: 14px;
     line-height: 176%;
     /* or 25px */
-    max-width: 100%;
+    max-width: 80%;
     letter-spacing: 0.04em;
 
     color: $text-color;
@@ -173,7 +176,7 @@
     font-size: 14px;
     line-height: 194%;
     /* or 27px */
-    max-width: 100%;
+    max-width: 80%;
     letter-spacing: 0.04em;
 
     color: $text-color;
@@ -196,7 +199,7 @@
     font-size: 14px;
     line-height: 176%;
     /* or 25px */
-    max-width: 100%;
+    max-width: 80%;
     letter-spacing: 0.04em;
 
     color: $text-color;
@@ -209,60 +212,30 @@
     font-size: 14px;
     line-height: 194%;
     /* or 27px */
-    max-width: 100%;
+    max-width: 80%;
     letter-spacing: 0.04em;
 
     color: $text-color;
   }
 }
 
-// .descbtn {
-//   background: $about-bg-color;
-//   border: none;
-//   border-radius: 22px;
-//   cursor: pointer;
-//   font-family: $font-primary;
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 18px;
-//   display: flex;
-//   align-items: baseline;
-//   text-align: center;
-//   color: $primary-accent-color;
-//   justify-content: center;
-//   margin-top: 20px;
-//   padding-bottom: 40px;
-// }
-
-// .descbtn > p {
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 18px;
-//   display: flex;
-//   align-items: baseline;
-//   text-align: center;
-//   justify-content: center;
-//   margin-right: 20px;
-//   align-items: baseline;
-// }
-
 .foot_desc {
   text-align: left;
   position: relative;
-  max-width: 320px;
 
   @include tablet {
-    font-family: 'DM Sans';
+    font-family: $font-primary;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 176%;
     margin: auto;
-    max-width: 100%;
+    padding-top: 40px;
+    max-width: fit-content;
   }
 
   @include desktop {
-    font-family: 'DM Sans';
+    font-family: $font-primary;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -270,16 +243,7 @@
     margin: auto;
     letter-spacing: 0.04em;
     position: relative;
-    max-width: 600px;
+    padding-left: 40px;
+    max-width: fit-content;
   }
 }
-
-// .foot_desc::before {
-//   background-position: 50%;
-//   background-size: contain;
-//   position: absolute;
-//   width: 280px;
-//   min-height: 133px;
-//   content: '';
-//   top: 365px;
-// }
