@@ -40,7 +40,7 @@
     border-radius: 8px;
     transform: scale(1);
 
-    transition: scale $animation;
+    transition: transform $animation;
 
     &:hover,
     &:focus {

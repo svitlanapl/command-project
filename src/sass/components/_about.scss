@@ -1,18 +1,32 @@
 .about {
   background: $about-bg-color;
+  padding-top: 60px;
   padding-bottom: 40px;
+
+
+
+  @include maxBreakpoints (767.8px) {
+    background-image: url(../images/about_img2_mob1x.png);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 615px;
+
+  }
+
+  @include minBreakpoints ($desktop) {
+    background-image: url(../images/about_img2_desc1x.png);
+    background-position-x: center;
+    background-position-y: 145px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
+
 .about_div {
   @include minBreakpoints($tablet) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-  }
-}
-.about-wrap {
-  @media screen and (max-width: 1199) {
-    padding-right: 90px;
-    padding-left: 99px;
   }
 }
 
@@ -23,26 +37,12 @@
   }
 }
 
-.about__container {
-  background: url(../images/about_img2_mob1x.png);
-
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: 79%;
-  padding-top: 60px;
-
-  @media (min-width: 321px) and (max-width: 1279px) {
-    background: none;
-  }
-
-  @media (min-width: 1280px) {
-    background: url(../images/about_img2_desc1x.png);
-
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: 100%;
+.about-wrap {
+  @include maxBreakpoints (767767.8px) {
+    margin-bottom: 40px;
   }
 }
+
 
 .label {
   font-family: $font-secondary;
@@ -55,10 +55,12 @@
   text-align: center;
   flex-direction: column;
   align-items: center;
+
   @include tablet {
     font-size: 26px;
     line-height: 1.14;
   }
+
   @include desktop {
     font-size: 30px;
   }
@@ -74,11 +76,13 @@
   text-transform: uppercase;
   color: $primary-accent-color;
   margin: 15px 64px 32px 56px;
+
   @include tablet {
     margin-top: 16px;
     margin-bottom: 40px;
     font-style: 48px;
   }
+
   @include desktop {
     margin-bottom: 60px;
     font-size: 58px;
@@ -86,33 +90,20 @@
 }
 
 .desc1 {
-  font-family: $font-primary;
-  font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-  max-width: 220px;
   margin-bottom: 32px;
   color: $primary-text-color;
+
   @include tablet {
-    font-family: $font-primary;
-    font-weight: 500;
     font-size: 14px;
     line-height: 176%;
-    max-width: 80%;
-    /* or 25px */
-    // width: 463px;
-    color: $primary-text-color;
   }
 
   @include desktop {
-    font-family: $font-primary;
-    font-weight: 500;
     font-size: 16px;
     line-height: 176%;
-    /* or 28px */
-    max-width: 80%;
     letter-spacing: 0.04em;
-    // max-width: 80%;
     color: $primary-text-color;
   }
 }
@@ -121,129 +112,71 @@
   display: none;
 }
 
-.about-wrap {
-  display: flex;
-  width: 100%;
-  box-sizing: content-box;
-  @include tablet {
-    display: flex;
-    width: 200%;
-    margin-right: 20px;
-    box-sizing: content-box;
-  }
-
-  @include desktop {
-    display: flex;
-    width: 100%;
-    margin-right: 10px;
-    box-sizing: content-box;
-    padding-left: 40px;
-  }
-}
-
-// .img_milk {
-//   position: absolute;
-//   z-index: 3;
-//   top: -50px;
-//   left: 0;
-// }
-
 .desc2 {
-  font-family: $font-primary;
-  font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
   color: $text-color;
-  position: relative;
-  max-width: 220px;
+  // position: relative;
   margin-bottom: 20px;
 
   @include tablet {
-    font-family: $font-primary;
-    font-weight: 500;
     font-size: 14px;
     line-height: 176%;
-    /* or 25px */
-    max-width: 80%;
     letter-spacing: 0.04em;
-
-    color: $text-color;
   }
 
   @include desktop {
-    font-family: $font-primary;
-    font-weight: 500;
-    font-size: 14px;
     line-height: 194%;
-    /* or 27px */
-    max-width: 80%;
-    letter-spacing: 0.04em;
-
-    color: $text-color;
   }
 }
 
 .desc3 {
-  font-family: $font-primary;
-  font-weight: 500;
   font-size: 12px;
   line-height: 162%;
   color: $text-color;
   position: relative;
-  max-width: 220px;
   margin-bottom: 20px;
 
   @include tablet {
-    font-family: $font-primary;
-    font-weight: 500;
     font-size: 14px;
     line-height: 176%;
-    /* or 25px */
-    max-width: 80%;
     letter-spacing: 0.04em;
 
     color: $text-color;
   }
 
   @include desktop {
-    font-family: $font-primary;
-    font-style: normal;
-    font-weight: 500;
     font-size: 14px;
     line-height: 194%;
-    /* or 27px */
-    max-width: 80%;
-    letter-spacing: 0.04em;
 
     color: $text-color;
   }
 }
 
 .foot_desc {
+  font-size: 12px;
   text-align: left;
-  position: relative;
+  // position: relative;
 
   @include tablet {
-    font-family: $font-primary;
-    font-style: normal;
-    font-weight: 500;
+    max-width: 335px;
     font-size: 14px;
     line-height: 176%;
-    margin: auto;
-    padding-top: 40px;
-    max-width: fit-content;
+    margin-left: 32px;
+    margin-top: 40px;
   }
 
   @include desktop {
-    font-family: $font-primary;
-    font-style: normal;
-    font-weight: 500;
+    max-width: 465px;
+    margin-left: 99px;
+    margin-top: 60px;
     font-size: 16px;
-    line-height: 176%;
-    margin: auto;
-    letter-spacing: 0.04em;
-    position: relative;
-    padding-left: 40px;
-    max-width: fit-content;
+    line-height: 194%;
+    letter-spacing: .04em;
   }
+}
+
+.desc-text {
+  display: block;
+  padding-top: 27px;
 }
