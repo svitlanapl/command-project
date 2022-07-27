@@ -1,0 +1,2 @@
+!function(){var t={openProducts2Btn:document.querySelector("[data-products-2-open]"),closeProducts2Btn:document.querySelector("[data-products-2-close]"),products2:document.querySelector("[data-products-2]"),body:document.querySelector("body")};function o(){t.products2.classList.toggle("is-hidden"),t.body.classList.toggle("no-scroll")}t.openProducts2Btn.addEventListener("click",o),t.closeProducts2Btn.addEventListener("click",o)}();
+//# sourceMappingURL=index.08d742fb.js.map
