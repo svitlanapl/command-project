@@ -97,9 +97,14 @@ $top-tablet-offset: 24px;
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
-  min-height: 100vh;
   z-index: 15;
+
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  overflow-y: auto;
+
   background-color: $menu-bg-color;
   transform: translateX(100%);
   transition: transform $animation, visibility $animation;
