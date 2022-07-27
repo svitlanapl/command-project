@@ -100,7 +100,9 @@
     display: none;
   }
 
-  .contacts__title-cafe:hover .contacts__img {
+  .contacts__title-cafe:hover .contacts__img,
+  .contacts__title-cafe:focus .contacts__img
+  {
     display: block;
     position: absolute;
     margin-right: -250px;
@@ -114,7 +116,9 @@
     }
   }
 
-  .contacts__title-foodtruck:hover .contacts__img {
+  .contacts__title-foodtruck:hover .contacts__img,
+  .contacts__title-foodtruck:focus .contacts__img
+  {
     display: block;
     position: absolute;
     margin-right: -250px;
@@ -216,7 +220,10 @@
   }
 
   .contacts__time-first:hover:after,
-  .contacts__time-second:hover:after {
+  .contacts__time-second:hover:after,
+  .contacts__time-first:focus:after,
+  .contacts__time-second:focus:after
+  {
     content: 'Opening hours can change on official holidays';
     position: sticky;
     width: max-content;
