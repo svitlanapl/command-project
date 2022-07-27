@@ -1,5 +1,5 @@
 (() => {
-  // === For Header animation start ===
+  // === Header animation start ===
   const headerSection = document.querySelector('.header');
   const heroSection = document.querySelector('.hero');
 
@@ -24,7 +24,7 @@
     }
   }
 
-  // === Mobile ===
+  // ---- Mobile ----
   function scrollHandlerMobile() {
     const heroHeight = heroSection.offsetHeight;
     const headerHeight = headerSection.offsetHeight;
@@ -61,7 +61,7 @@
     previousPosition = scrollPosition;
   }
 
-  // === Desktop ===
+  // ---- Desktop ----
   function scrollHandlerDesktop() {
     const scrollPosition = scrollY;
     const headerHeight = headerSection.offsetHeight;
@@ -80,9 +80,9 @@
       headerSection.classList.remove('header--background');
     }
   }
-  // --- For Header animation end ---
+  // ---- Header animation end ----
 
-  // === For Menu start ===
+  // === Menu start ===
   const menuBtnBurger = document.querySelector('[data-burger-button]');
   const menuBtnClose = document.querySelector('[data-close-button]');
 
@@ -105,9 +105,9 @@
     mobileMenu.classList.add('is-open');
     body.classList.add('scroll-off');
   }
-  // --- For Menu end ---
+  // ---- Menu end ----
 
-  // === Modal window Start ===
+  // === Modal window start ===
   const buyBtns = document.querySelectorAll('[data-buy-now]');
   const modalWindow = document.querySelector('[data-franchise]');
 
@@ -120,5 +120,5 @@
     modalWindow.classList.toggle('is-hidden');
     document.body.classList.toggle('no-scroll');
   }
-  // --- Modal window End ---
+  // ---- Modal window snd ----
 })();
