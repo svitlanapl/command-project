@@ -17,7 +17,8 @@
                     consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et. dolore magna aliqua facilisis. 
                     </p>
-                    <button class="button button--circle card-btn">
+                    <button class="button button--circle card-btn"
+                    data-products-1-open>
                         <svg class="button__icon" width="12" height="12">
                         <use href="./images/icons.svg#arrow"></use>
                         </svg>
@@ -34,7 +35,9 @@
                     consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et. dolore magna aliqua facilisis. 
                     </p>
-                    <button class="button button--circle card-btn">
+                    <button class="button button--circle card-btn"
+                    data-products-2-open
+                    >
                         <svg class="button__icon" width="12" height="12">
                         <use href="./images/icons.svg#arrow"></use>
                         </svg>
@@ -52,7 +55,7 @@
                     tempor incididunt ut labore et. dolore magna aliqua facilisis. 
                     </p>
                     <button class="button button--circle card-btn" 
-                
+                    data-products-3-open
                     >
                         <svg class="button__icon" width="12" height="12">
                         <use href="./images/icons.svg#arrow"></use>
@@ -65,20 +68,82 @@
     </div>
 </section>
  
-
-<!-- <div class="product-backdrop is-hidden" 
-    data-locations
+<!--   modal window -   menu  for Ice-cream - menu -->
+ <div class="product-backdrop backdrop is-hidden" 
+    data-products-1
 >
-    <div class="product-modal-menu">
-        1
-        2
-        3
-        <button class="button product-btn-close" 
-        data-locations-close 
+    <div class="product-modal-menu product--menu1 ">
+       
+        <h3 class="card__title"> Best choices</h3>
+                <ul class="card__text-list list"> 
+                    <li><p class="  product-menu-item">  Vanilla Ice cream 2 eur </p></li>
+                    <li><p class="  product-menu-item">  Strawberry Ice cream 2 eur </p></li>
+                    <li><p class=" product-menu-item">  Gluten-free Ice cream 3 eur </p></li>
+                    <li><p class=" product-menu-item">  Lactose-free Ice cream 4 eur </p></li>
+             
+            </ul>
+      
+        <button class="button product-modal__btn-close " 
+        data-products-1-close 
         >
-            XXXXXX
+        <svg class="product-modal__icon-close" width="14" height="14">
+            <use href="./images/icons.svg#close"
+            ></use>
+        </svg>
         </button>
-    </div> -->
+        </button>
+    </div> 
     
-   
+</div>
+<!--   modal window -   menu  for Ice-coffe - menu -->
+
+<div class="product-backdrop backdrop is-hidden" 
+data-products-2
+>
+<div class="product-modal-menu product--menu2">
+    <h3 class="card__title"> Best choices</h3>
+                <ul class="card__text-list list"> 
+                    <li><p class="  product-menu-item">  Vanilla Ice coffee 2 eur </p></li>
+                    <li><p class="  product-menu-item">  Decaf  Ice coffee 2 eur </p></li>
+                    <li><p class=" product-menu-item">  Whisky  Ice coffee 3 eur </p></li>
+                    <li><p class=" product-menu-item">  Almond-milk ice-coffee eur </p></li>
+            
+            </ul>
+    <button class="button product-modal__btn-close" 
+    data-products-2-close 
+    >
+    <svg class="burger-button__icon product__closebtn" width="14" height="14">
+        <use href="./images/icons.svg#close"
+        ></use>
+    </svg>
+    </button>
+    </button>
+</div> 
+
+</div>
+
+<!--   modal window -   menu  for Milkshakes - menu -->
+
+<div class="product-backdrop backdrop is-hidden" 
+data-products-3
+>
+<div class="product-modal-menu product--menu3">
+    <h3 class="card__title"> Best choices</h3>
+    <ul class="card__text-list list"> 
+        <li><p class="  product-menu-item">  Vanilla Milkshake 2 eur </p></li>
+        <li><p class="  product-menu-item">  Strawberry Milkshake 2 eur </p></li>
+        <li><p class=" product-menu-item">  Gluten-free Milkshake 3 eur </p></li>
+        <li><p class=" product-menu-item">  Lactose-free Milkshake 4 eur </p></li>
+ 
+</ul>
+    <button class="button product-modal__btn-close" 
+    data-products-3-close 
+    >
+    <svg class="burger-button__icon" width="14" height="14">
+        <use  href="./images/icons.svg#close"
+        ></use>
+    </svg>
+    </button>
+</div> 
+
 </div>
