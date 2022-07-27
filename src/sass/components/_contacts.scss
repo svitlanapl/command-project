@@ -10,6 +10,7 @@
     $secondary-light-color 302px,
     $about-bg-color 0
   );
+  padding-bottom: 40px;
   @media screen and (min-width: 768px) {
     background: linear-gradient(
       to bottom,
@@ -22,6 +23,7 @@
         $secondary-light-color 100px,
         $about-bg-color 0
       );
+      padding-bottom: 121px;
     }
   }
 }
