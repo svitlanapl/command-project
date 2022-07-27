@@ -1,21 +1,31 @@
-
 .about {
   background: $about-bg-color;
   padding-bottom: 40px;
- 
 }
-.about_div{
-  @include minBreakpoints ($tablet){
+.about_div {
+  @include minBreakpoints($tablet) {
     display: flex;
   }
 }
 
-.about__container{
+.about__container {
   background: url(../images/about_img2_mob1x.png);
 
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-y: 60%;
+  background-position-y: 82%;
+
+  @media (min-width: 321px) and (max-width: 1279px) {
+    background: none;
+  }
+
+  @media (min-width: 1280px) {
+    background: url(../images/about_img2_desc1x.png);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 100%;
+  }
 }
 
 .label {
@@ -53,18 +63,56 @@
   margin-bottom: 40px;
   color: $primary-text-color;
   max-width: 220px;
+
+  @include tablet {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 176%;
+    /* or 25px */
+    max-width: 100%;
+    color: $primary-text-color;
+  }
+
+  @include desktop {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 176%;
+    /* or 28px */
+
+    letter-spacing: 0.04em;
+    max-width: 100%;
+    color: $primary-text-color;
+  }
 }
 
 #more {
   display: none;
 }
 
-.img_milk {
-  position: absolute;
-  z-index: 3;
-  top: -50px;
-  left: 0;
+.about-wrap {
+  display: flex;
+  width: 100%;
+  @include tablet {
+    display: flex;
+    width: 200%;
+    margin-right: 80px;
+  }
+
+  @include desktop {
+    display: flex;
+    width: 150%;
+    margin-right: 80px;
+  }
 }
+
+// .img_milk {
+//   position: absolute;
+//   z-index: 3;
+//   top: -50px;
+//   left: 0;
+// }
 
 .desc2 {
   font-family: $font-primary;
@@ -75,6 +123,30 @@
   position: relative;
   max-width: 220px;
   margin-bottom: 20px;
+
+  @include tablet {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 176%;
+    /* or 25px */
+    max-width: 100%;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+  }
+
+  @include desktop {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 194%;
+    /* or 27px */
+    max-width: 100%;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+  }
 }
 
 .desc3 {
@@ -86,6 +158,31 @@
   position: relative;
   max-width: 220px;
   margin-bottom: 20px;
+
+  @include tablet {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 176%;
+    /* or 25px */
+    max-width: 100%;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+  }
+
+  @include desktop {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 194%;
+    /* or 27px */
+    max-width: 100%;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+  }
 }
 
 // .descbtn {
@@ -122,15 +219,36 @@
   text-align: left;
   position: relative;
   max-width: 320px;
- 
+
+  @include tablet {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 176%;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  @include desktop {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 176%;
+    margin: auto;
+    letter-spacing: 0.04em;
+    position: relative;
+    max-width: 600px;
+  }
 }
 
-.foot_desc::before {
-  background-position: 50%;
-  background-size: contain;
-  position: absolute;
-  width: 280px;
-  min-height: 133px;
-  content: '';
-  top: 365px;
-}
+// .foot_desc::before {
+//   background-position: 50%;
+//   background-size: contain;
+//   position: absolute;
+//   width: 280px;
+//   min-height: 133px;
+//   content: '';
+//   top: 365px;
+// }
