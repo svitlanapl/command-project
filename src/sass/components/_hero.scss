@@ -179,6 +179,7 @@ $hero-height-desktop: 665px;
 .hero__giphy {
   display: none;
   pointer-events: none;
+
   &.is-show {
     @include desktop {
       display: block;
@@ -255,7 +256,7 @@ $hero-height-desktop: 665px;
   }
 }
 .container-bg {
-  width: 100vw;
+  width: calc(100vw - 20px);
   padding-left: 36px;
   @include tablet {
     padding-left: 65px;
