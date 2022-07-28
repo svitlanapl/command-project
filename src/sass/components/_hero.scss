@@ -172,6 +172,7 @@ $hero-height-desktop: 665px;
   min-height: $hero-height-mobile;
   padding-top: $hero-top-mobile;
   overflow-x: clip;
+  width: 100%;
 
   @include tablet {
     min-height: $hero-height-tablet;
