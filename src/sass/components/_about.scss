@@ -10,16 +10,21 @@
 
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-y: 615px;
+    background-position-y: 595px;
 
   }
 
   @include minBreakpoints ($desktop) {
     background-image: url(../images/about_img2_desc1x.png);
     background-position-x: center;
-    background-position-y: 145px;
+    background-position-y: 205px;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  @include minBreakpoints (1800px) {
+    background-size: cover;
+    background-position-y: center;
   }
 }
 
@@ -38,8 +43,12 @@
 }
 
 .about-wrap {
-  @include maxBreakpoints (767767.8px) {
+  max-width: fit-content;
+
+  @include maxBreakpoints (767.8px) {
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -75,7 +84,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $primary-accent-color;
-  margin: 15px 64px 32px 56px;
+  margin: 15px 0 32px 0;
 
   @include tablet {
     margin-top: 16px;
@@ -98,9 +107,11 @@
   @include tablet {
     font-size: 14px;
     line-height: 176%;
+    margin-bottom: 16px;
   }
 
   @include desktop {
+    margin-bottom: 32px;
     font-size: 16px;
     line-height: 176%;
     letter-spacing: 0.04em;
@@ -156,14 +167,14 @@
 .foot_desc {
   font-size: 12px;
   text-align: left;
-  // position: relative;
+  width: 78%;
 
   @include tablet {
     max-width: 335px;
     font-size: 14px;
     line-height: 176%;
     margin-left: 32px;
-    margin-top: 40px;
+    // margin-top: 40px;
   }
 
   @include desktop {
@@ -178,5 +189,9 @@
 
 .desc-text {
   display: block;
-  padding-top: 27px;
+  padding-top: 16px;
+
+  @include minBreakpoints ($desktop) {
+    padding-top: 27px;
+  }
 }
