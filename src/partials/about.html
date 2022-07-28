@@ -4,7 +4,16 @@
         <h2 class="title">HOW IT'S MADE?</h2>
         <div class="about_div">
             <div class="about-wrap">
-                <img src="./images/about_img1_desc1x.png" alt="Корова з молоком" width="100%">
+                <picture>
+                    <source srcset="./images/about_img1_desc1x.png 1x, ./images/about_img1_desc1x.png 2x"
+                        media="(min-width: 1200px)">
+                    <source srcset="./images/about_img1_tab1x.png 1x, ./images/aabout_img1_tab2x.png 2x"
+                        media="(min-width: 390px)">
+                    <source srcset="./images/aabout_img1_mob1x.png 1x, ./images/aabout_img1_mob2x.png 2x"
+                        media="(min-width: 330px)">
+                    <source srcset="./images/about_img1_desc1x.png 1x, ./images/about_img1_desc1x.png 2x">
+                    <img src="./images/about_img1_desc1x.png" alt="cow" class="about_cow">
+                </picture>
             </div>
             <div class="foot_desc">
                 <p class="desc1">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus,
@@ -16,7 +25,7 @@
                         imperdiet placerat.
                         Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
                         tincidunt.
-                        <br><br>Aliquam erat volutpat. Aenean accumsan<span id="dots">.</span></br></br>
+                        <span class="desc-text">Aliquam erat volutpat. Aenean accumsan.</span><span id="dots"></span>
                     </p>
                     <div class="desc3">
                         <p id="more">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -29,9 +38,9 @@
                 </div>
                 <button onclick="myFunction()" id="myBtn" class="button">
                     Read More
-                    <!-- <svg width="8" height="7" class="button__icon">
+                    <svg class="button__icon" width="8" height="10">
                         <use href="./images/icons.svg#icon-more"></use>
-                    </svg> -->
+                    </svg>
                 </button>
             </div>
         </div>
