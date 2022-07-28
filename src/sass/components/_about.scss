@@ -21,6 +21,11 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  @include minBreakpoints (1800px) {
+    background-size: cover;
+    background-position-y: center;
+  }
 }
 
 .about_div {
