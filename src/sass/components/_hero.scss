@@ -23,26 +23,6 @@ $hero-height-desktop: 665px;
 .hero__container {
   display: flex;
   justify-content: space-between;
-
-  // =====  need delete
-  // width: 100%;
-  // margin: 0 auto;
-  // padding: 0 20px;
-
-  // @include minBreakpoints(425px) {
-  //   width: 425px;
-  // }
-
-  // @include minBreakpoints($tablet) {
-  //   width: $tablet;
-  //   padding: 0 32px;
-  // }
-
-  // @include minBreakpoints($desktop) {
-  //   width: $desktop;
-  //   padding: 0 16px;
-  // }
-  // // =====
 }
 
 .hero__left-box {
@@ -146,7 +126,7 @@ $hero-height-desktop: 665px;
   }
 }
 
-.hero__text-box {
+.hero__text {
   @include tablet {
     width: 114px;
   }
@@ -154,7 +134,18 @@ $hero-height-desktop: 665px;
     width: 200px;
   }
 }
-.hero__text {
+
+.hero__more-text {
+  @include tablet {
+    width: 300px;
+  }
+  @include desktop {
+    width: 550px;
+  }
+}
+
+.hero__text,
+.hero__more-text {
   font-family: $font-primary;
   font-style: normal;
   font-weight: 400;
@@ -163,77 +154,13 @@ $hero-height-desktop: 665px;
   color: $secondary-light-color;
 
   @include desktop {
-    padding: 10px;
     font-size: 14px;
     line-height: 1.4;
-    &:not(.is-show) {
-      display: none;
-    }
   }
 }
 
-.hero__more-btn__text {
+.hero__more-text:not(.is-show) {
   display: none;
-}
-
-.hero__giphy {
-  display: none;
-  pointer-events: none;
-
-  &.is-show {
-    @include desktop {
-      display: block;
-    }
-    & ~ .hero__more-btn__text {
-      font-family: $font-primary;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 8px;
-      line-height: 1.5;
-      color: $secondary-light-color;
-
-      @include tablet {
-        display: block;
-        @include desktop {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-.hero__more-btn {
-  width: 0;
-  height: 0;
-  border-top: 9px solid transparent;
-  border-left: 18px solid $primary-accent-color;
-  border-bottom: 9px solid transparent;
-  transition: border-left-color $animation;
-  &:hover,
-  &:focus {
-    border-left-color: hsla(345, 84%, 55%);
-  }
-  @include desktop {
-    border-top: 13px solid transparent;
-    border-left: 26px solid $primary-accent-color;
-    border-bottom: 13px solid transparent;
-  }
-
-  &.is-show {
-    width: 18px;
-    height: 18px;
-    background-color: $primary-accent-color;
-    border-left-color: $primary-accent-color;
-    transition: background-color $animation;
-    @include desktop {
-      width: 26px;
-      height: 26px;
-    }
-  }
-  &:hover.is-show,
-  &:focus.is-show {
-    background-color: hsla(345, 84%, 55%);
-  }
 }
 
 .hero__background {

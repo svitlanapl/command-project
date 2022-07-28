@@ -1,15 +1,12 @@
 (() => {
   const heroMoreBtn = document.querySelector('.hero__more-btn');
-  const heroText = document.querySelector('.hero__text');
-  const heroGiphy = document.querySelector('.hero__giphy');
+  const heroMoreText = document.querySelector('.hero__more-text');
 
   heroMoreBtn.addEventListener('click', toggleMore);
   window.addEventListener('load', windoLoad);
 
   function toggleMore() {
-    heroMoreBtn.classList.toggle('is-show');
-    heroText.classList.toggle('is-show');
-    heroGiphy.classList.toggle('is-show');
+    heroMoreText.classList.toggle('is-show');
   }
 
   function windoLoad() {
@@ -25,16 +22,11 @@
     const text = heroTitle.innerText;
     heroTitle.innerText = '';
 
-    printText(text, heroTitle, 300);
-    document.getElementById('heroTitle').style.color = '#d41443';
-    setTimeout(function () {
-      document.getElementById('heroTitle').style.color = '#ffffff';
-    }, 1000);
-    // document.getElementById('heroTitle').style.transition = 'color 3000';
+    printText(text, heroTitle, 100);
 
-    animateIcecreame(35, 1, 250);
-    animateCounters(cafes, valueCafes, 200);
-    animateCounters(trucks, valueTrucks, 150);
+    animateIcecreame(35, 1, 150);
+    animateCounters(cafes, valueCafes, 100);
+    animateCounters(trucks, valueTrucks, 75);
   }
 
   const animateCounters = function (counter, value, delay) {
@@ -70,5 +62,5 @@
   setTimeout(function () {
     document.getElementById('heroIcecream').style.transform =
       'translate(22%,10%)';
-  }, 6000);
+  }, 3000);
 })();
