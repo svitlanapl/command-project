@@ -10,14 +10,14 @@
 
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-y: 595px;
+    background-position-y: 76%;
 
   }
 
   @include minBreakpoints ($desktop) {
     background-image: url(../images/about_img2_desc1x.png);
     background-position-x: center;
-    background-position-y: 205px;
+    background-position-y: 80%;
     background-repeat: no-repeat;
     background-size: contain;
   }
